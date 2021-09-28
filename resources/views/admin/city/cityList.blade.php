@@ -7,7 +7,7 @@
 
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Listes des produires disponibles</h4>
+          <h4 class="card-title">Listes des villes</h4>
           <div class="row">
             <div class="col-12">
               <div class="table-responsive">
@@ -15,42 +15,39 @@
                   <thead>
                     <tr>
                         <th>Ordre</th>
-                        <th>image</th>
-                        <th>Nom du produire</th>
-                        <th>Prix</th>
-                        <th>Boutique</th>
-                       
-                        <th>ville</th>
-                        <th>Actions</th>
+                        <th>Nom de la ville</th>
+                        <th colspan="3" style="text-align: center;">Actions</th>
                         
                     </tr>
                   </thead>
           
         <tbody>
            
-@if($products)
-{{$increment=1}}
- @foreach ($products as $product)
+@if($cities)
+
+ @foreach ($cities as $city)
 
  <tr>
     <td>{{$increment=1}}</td>
-    <td>2012/08/03</td>
-    <td>{{$product->product_name}}</td>
-    <td>{{$product->product_price}} FCFA</td>
-    <td>{{$product->product_shop}}</td>
-    <td>{{$product->product_city}}</td>
-    
-    <td>
+    <td>{{$city->city_name}}</td>
+   <!-- <td>
       <label class="badge badge-info">On hold</label>
-    </td>
+    </td>   -->
     <td>
-      <button class="btn btn-outline-primary">View</button>
+    <a class="btn btn-outline-danger" href="{{url('/del_city/'.$city->id)}}" id="delete">Delete</a>             
     </td>
-</tr> 
+</tr>
+
+
+
+
+
+
+
  {{$increment+=$increment}}
  @endforeach 
 @else
-<h2 class="alert alert-success"> Aucun produire trouver dans la liste des produires </h2>
+<h2 class="alert alert-success"> Aucun ville trouver dans la liste des villes </h2>
     
 @endif
 

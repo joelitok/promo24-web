@@ -37,6 +37,7 @@ Route::get('/categoriesInC', [ClientController::class, 'categories']);
 Route::get('/categories',[CategoryController::class, 'categories']);
 Route::get('/new_category',[CategoryController::class, 'new_category']);
 Route::post('/post_category',[CategoryController::class, 'post_category']);
+Route::get('/del_category/{id}',[CategoryController::class, 'del_category']);
 
 
 
@@ -49,25 +50,50 @@ Route::get('/dashboard',[AdminController::class, 'dashboard']);
 Route::get('/cities',[CityController::class, 'cities']);
 Route::get('/new_city',[CityController::class, 'new_city']);
 Route::post('/post_city',[CityController::class, 'post_city']);
-
+Route::post('/del_city/{id}',[CityController::class, 'del_city']);
 
 
 
 //products
 Route::get('/products', [ProductController::class,'products']);
-Route::get('/products_promo', [ProductController::class,'products_promotions']);
 Route::get('/new_product', [ProductController::class,'new_product']);
 Route::post('/post_product', [ProductController::class,'post_product']);
 Route::get('/list_products',[ProductController::class,'list_products']);
+Route::get('/del_product/{id}',[ProductController::class,'del_product']);
+Route::get('/edit_product/{id}',[ProductController::class,'edit_product']);
+Route::post('/update_product',[ProductController::class,'update_product']);
+Route::get('/desactiverproduct/{id}',[ProductController::class,'desactiver_product']);
+Route::get('/activerproduct/{id}',[ProductController::class,'activer_product']);
+Route::get('/list_promo_products',[ProductController::class,'list_promo_products']);
+Route::get('/del_p_product/{id}',[ProductController::class,'del_p_product']);
+
+
+
+
+
+
+
+
+
+
+Route::get('/new_product_promotion', [ProductController::class,'new_product_promotion']);
+Route::get('/list_promo_products', [ProductController::class,'list_promo_products']);
+Route::post('/p_post_product', [ProductController::class,'post_product_promotion']);
+
+
 
 
 //sliders 
 Route::get('/sliders', [SliderController::class,'sliders']);
-
-
+Route::get('/new_slider', [SliderController::class,'new_slider']);
+Route::post('/post_slider', [SliderController::class,'post_slider']);
+Route::get('/del_slider/{id}',[SliderController::class,'del_slider']);
 
 //Shop
-Route::get('/shop', [ShopController::class,'shop']);
+Route::get('/shops', [ShopController::class,'list_shops']);
+Route::get('/new_shop', [ShopController::class,'new_shop']);
+Route::post('/post_shop', [ShopController::class,'post_shop']);
+Route::get('/del_shop/{id}', [ShopController::class,'del_shop']);
 
 
 

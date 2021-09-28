@@ -21,7 +21,7 @@
                 @endforeach
                 @endif
                 </div>
-                <form class="cmxform" id="commentForm" method="POST" action="{{url('/post_product')}}" enctype="multipart/form-data">
+                <form class="cmxform" id="commentForm" method="POST" action="{{url('/p_post_product')}}" enctype="multipart/form-data">
                     {{csrf_field()}}
                     <fieldset>
                        
@@ -30,7 +30,7 @@
 
                 <div class="card">
                   <div class="card-body">
-                    <h3 class="card-title" style="text-align:center;"> Ajouter un produit</h3>
+                    <h3 class="card-title" style="text-align:center;"> Ajouter une promotion de produire</h3>
 
 
                     <div class="form-group row">
@@ -38,7 +38,7 @@
                         <label class="col-form-label">Nom :</label>
                       </div>
                       <div class="col-lg-8">
-                        <input class="form-control" maxlength="50" name="product_name" type="text" placeholder="Nom du produit..">
+                        <input class="form-control" maxlength="50" name="p_product_name" type="text" placeholder="Nom du produit..">
                       </div>
                     </div>
 
@@ -48,7 +48,7 @@
                         <label class="col-form-label">Description</label>
                       </div>
                       <div class="col-lg-8">
-                        <textarea  name="product_description" class="form-control" maxlength="10000" type="text" rows="2" placeholder="Description du produit.."></textarea>
+                        <textarea  name="p_product_description" class="form-control" maxlength="10000" type="text" rows="2" placeholder="Description du produit.."></textarea>
                     </div>
                     </div>
                     <div class="form-group row">
@@ -56,37 +56,39 @@
                           <label class="col-form-label">Prix</label>
                         </div>
                         <div class="col-lg-8">
-                          <input class="form-control"  name="product_price"  type="number" placeholder="Prix du produit..">
+                          <input class="form-control"  name="p_product_price"  type="number" placeholder="Prix du produit..">
                         </div>
                       </div>
 
-                      <div class="form-group row">
+                     <div class="form-group row">
                         <div class="col-lg-3">
                           <label class="col-form-label">Boutique</label>
                         </div>
                         <div class="col-lg-8">
-                            <select name="product_shop" class="form-control">
-                                <option >boutique 1
-                                </option>
-                                <option >boutique 2
-                                </option>
+                            <select name="p_product_shop" class="form-control">
+                                @foreach ($shops as $shop)
+                                    
+                                    <option >{{$shop->shop_name}}
+                                    </option>
+                                @endforeach
+                                
+                             
                                
                             </select>
                         </div>
                       </div>
-
-
 
                       <div class="form-group row">
                         <div class="col-lg-3">
                           <label class="col-form-label">Cat&eacute;gorie</label>
                         </div>
                         <div class="col-lg-8">
-                            <select name="product_category" class="form-control">
-                                <option>Categorie 1
-                                </option>
-                                <option >Categorie 2
-                                </option>
+                            <select name="p_product_category" class="form-control">
+                                @foreach ($categories as $categorie)
+                                <option> {{$categorie->category_name}}
+                                </option>    
+                                @endforeach
+                                
                                
                             </select>
                         </div>
@@ -98,11 +100,13 @@
                           <label class="col-form-label">Ville</label>
                         </div>
                         <div class="col-lg-8">
-                            <select name="product_city" class="form-control">
-                                <option >Ville 1
-                                </option>
-                                <option >Ville 2
-                                </option>
+
+
+                            <select name="p_product_city" class="form-control">
+                                @foreach ($cities as $city)
+                                <option >{{$city->city_name}}
+                                </option> 
+                                @endforeach 
                             </select>
                         </div>
                       </div>
@@ -114,7 +118,7 @@
                           <label class="col-form-label">Image</label>
                         </div>
                         <div class="col-lg-8">
-                          <input  class="form-control" name="product_image" type="file">
+                          <input  class="form-control" name="p_product_image" type="file">
                         </div>
                       </div>
 

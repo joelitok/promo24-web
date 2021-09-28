@@ -60,7 +60,7 @@
           <li class="nav-item">
             <a class="nav-link" href="index.html">
               <i class="ti-home menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+              <span class="menu-title">Tableau de bord</span>
             </a>
           </li>
           <li class="nav-item">
@@ -72,10 +72,10 @@
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"><a class="nav-link" href="{{URL::to('/cities')}}">Villes</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{URL::to('/shop')}}">Boutiques</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{URL::to('/shops')}}">Boutiques</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{URL::to('/categories')}}">Cat&eacute;gories</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{URL::to('/products')}}">Produires</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{URL::to('/products_promo')}}">Produires en promotions</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{URL::to('/list_products')}}">Produires</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{URL::to('/list_promo_products')}}">Produires en promotions</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{URL::to('/sliders')}}">Slides</a></li>
 
                <!-- <li> &agrave;&Agrave;&aelig;&egrave;&eacute;&copy;</li>  -->
@@ -112,6 +112,10 @@
     </div>
     <!-- page-body-wrapper ends -->
   </div>
+ 
+
+
+
   <!-- container-scroller -->
 
   <!-- plugins:js -->
@@ -126,7 +130,27 @@
   <script src="{{asset('backend/js/template.js')}}"></script>
   <script src="{{asset('backend/js/settings.js')}}"></script>
   <script src="{{asset('backend/js/todolist.js')}}"></script>
+  <script src="{{asset('backend/js/bootbox.min.js')}}"></script>
   <!-- endinject -->
+
+  <script>
+    $(document).on("click", "#delete", function(e){
+    e.preventDefault();
+    var link = $(this).attr("href");
+    bootbox.confirm("Voulez-vous vraiment supprimer cet element ?", function(confirmed){
+      if (confirmed){
+          window.location.href = link;
+          
+        };
+      });
+    });
+  </script>
+
+
+
+
+
+
   <!-- Custom js for this page-->
   <script src="{{asset('backend/js/dashboard.js')}}"></script>
   <!-- End custom js for this page-->
