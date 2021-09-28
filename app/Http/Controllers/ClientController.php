@@ -17,6 +17,6 @@ class ClientController extends Controller
     return view('client.contact');
    }
    public function categories(){
-       return view('client.categories');
+       return view('client.categoriesInc');
    }
 }
