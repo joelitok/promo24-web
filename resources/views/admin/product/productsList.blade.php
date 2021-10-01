@@ -30,11 +30,11 @@
         <tbody>
            
 @if($products)
-
+{{$inc=1}}
  @foreach ($products as $product)
 
  <tr>
-    <td>{{$increment=1}}</td>
+    <td>{{$inc}}</td>
     <td><img src="/storage/product_images/{{$product->product_image}}"></td>
     <td>{{$product->product_name}}</td>
     <td>{{$product->product_price}} FCFA</td>
@@ -75,7 +75,7 @@
 
 
 
- {{$increment+=$increment}}
+ {{$inc+=1}}
  @endforeach 
 @else
 <h2 class="alert alert-success"> Aucun produire trouver dans la liste des produires </h2>

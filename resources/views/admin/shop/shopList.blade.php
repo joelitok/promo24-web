@@ -35,7 +35,7 @@
   <a class="btn btn-outline-danger" href="{{url('/del_shop/'.$shop->id)}}"   id="delete">delete</a>
   </td>
 </tr>  
-<input type="hidden" value="{{$increment+=$increment}}">
+{{$increment+=1}}
 @endforeach
 </tbody>
 </table>

@@ -19,13 +19,11 @@
                   </thead>
           
         <tbody>
-           
+{{$inc=1}}         
 @if($categories)
-
- @foreach ($categories as $category)
-
+ @foreach ($categories as $category)  
  <tr>
-    <td>{{$increment=1}}</td>
+    <td>{{$inc}}</td>
     <td>{{$category->category_name}}</td>
    <!-- <td>
       <label class="badge badge-info">On hold</label>
@@ -37,11 +35,7 @@
 
 
 
-
-
-
-
- {{$increment+=$increment}}
+ {{$inc+=1}}
  @endforeach 
 @else
 <h2 class="alert alert-success"> Aucun categorie trouver dans la liste des categories </h2>

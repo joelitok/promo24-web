@@ -24,11 +24,11 @@
         <tbody>
            
 @if($cities)
-
+{{$increment=1}}
  @foreach ($cities as $city)
 
  <tr>
-    <td>{{$increment=1}}</td>
+    <td>{{$increment}}</td>
     <td>{{$city->city_name}}</td>
    <!-- <td>
       <label class="badge badge-info">On hold</label>
@@ -44,7 +44,7 @@
 
 
 
- {{$increment+=$increment}}
+ {{$increment+=1}}
  @endforeach 
 @else
 <h2 class="alert alert-success"> Aucun ville trouver dans la liste des villes </h2>

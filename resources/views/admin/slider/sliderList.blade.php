@@ -37,7 +37,7 @@
   <a class="btn btn-outline-danger" href="{{url('/del_slider/'.$slider->id)}}"   id="delete">delete</a>
   </td>
 </tr>  
-<input type="hidden" value="{{$increment+=$increment}}">
+{{$increment+=1}}
 @endforeach
 </tbody>
 </table>
