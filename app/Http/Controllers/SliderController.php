@@ -60,8 +60,8 @@ class SliderController extends Controller
 
 
 
-public function del_slider($id){
 
+public function del_slider($id){
     $slider=Slider::find($id);
     if($slider->slider_image!='noimage.jpg'){
         Storage::delete('public/slider_images/'.$slider->slider_image);
@@ -71,6 +71,29 @@ public function del_slider($id){
     'le produit '.$slider->slider_name.' a été supprimer avec succès');
 
 }
+
+
+
+public function desactive_slider($id){
+    $slider=Slider::find($id);
+    $slider->slider_status=0;
+    $slider->update();
+    return redirect('/sliders')->with('status', 'le slider a été désactiver  avec succes');
+
+
+}
+
+
+
+public function active_slider($id){
+    $slider=Slider::find($id);
+    $slider->slider_status=1;
+    $slider->update();
+    return redirect('/sliders')->with('status',  ' le slider a été activer avec succès');
+
+}
+
+
 
 
 

@@ -222,7 +222,7 @@
                             </li>
 							<li><a href="{{URL::to('/aboutus')}}">A propos </a></li>
 							<li><a href="{{URL::to('/contact')}}">Contact </a></li>
-							<li><a href="{{URL::to('/categories')}}">Categories</a></li>
+							<li><a href="{{URL::to('/client_categories')}}">Categories</a></li>
                             <li><a href="#" target="_blank">Nous suivre</a></li>
 							
 							
@@ -335,7 +335,7 @@
                        
                     </li>
                     <li><a href="{{URL::to('/contact')}}">Contact</a></li>
-                    <li><a href="{{URL::to('/categories')}}">Categories</a></li>
+                    <li><a href="{{URL::to('/client_categories')}}">Categories</a></li>
                     <li><a href="#">Nous suivre</a></li>
                 </ul>
             </nav>     <!-- End .mobile-nav -->

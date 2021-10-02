@@ -38,7 +38,7 @@
                         <label class="col-form-label">Nom :</label>
                       </div>
                       <div class="col-lg-8">
-                        <input class="form-control" maxlength="50" name="product_name" type="text" placeholder="Nom du produit..">
+                        <input class="form-control" maxlength="50" name="product_name" type="text" placeholder="Nom du produit.." required>
                       </div>
                     </div>
 
@@ -48,7 +48,7 @@
                         <label class="col-form-label">Description</label>
                       </div>
                       <div class="col-lg-8">
-                        <textarea  name="product_description" class="form-control" maxlength="10000" type="text" rows="2" placeholder="Description du produit.."></textarea>
+                        <textarea  name="product_description" class="form-control" maxlength="10000" type="text" rows="2" placeholder="Description du produit.." required></textarea>
                     </div>
                     </div>
                     <div class="form-group row">
@@ -56,7 +56,7 @@
                           <label class="col-form-label">Prix</label>
                         </div>
                         <div class="col-lg-8">
-                          <input class="form-control"  name="product_price"  type="number" placeholder="Prix du produit..">
+                          <input class="form-control"  name="product_price"  type="number" placeholder="Prix du produit.." required>
                         </div>
                       </div>
 

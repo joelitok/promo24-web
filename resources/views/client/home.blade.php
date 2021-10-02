@@ -21,6 +21,7 @@
                         </div>
                         <p>* Only 200 Available</p>
                     </div>
+
                     <div class="home-slide" style="background-image: url('{{asset('frontend/images/slider/home_slide2.jpg')}}');">
                         <div class="slide-content content-left">
                             <h2 class="text-left">Top brands<br>smartphones</h2>
@@ -31,6 +32,7 @@
                             <button class="btn">View All Now</button>
                         </div>                                
                     </div>
+                    
                 </div>
             </div>
             <div class="col-lg-3">

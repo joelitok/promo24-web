@@ -34,7 +34,7 @@
                         <label class="col-form-label">Nom :</label>
                       </div>
                       <div class="col-lg-8">
-                        <input class="form-control" maxlength="50" name="city_name" type="text" placeholder="Nom de la Ville..">
+                        <input class="form-control" maxlength="50" name="city_name" type="text" placeholder="Nom de la Ville.." required>
                       </div>
                     </div>
                     <input class="btn btn-primary" type="submit" value="Submit">

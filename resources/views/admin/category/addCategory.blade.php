@@ -31,7 +31,7 @@
                         <label class="col-form-label">Nom :</label>
                       </div>
                       <div class="col-lg-8">
-                        <input class="form-control" maxlength="50" name="category_name" type="text" placeholder="Nom de la categorie..">
+                        <input class="form-control" maxlength="50" name="category_name" type="text" placeholder="Nom de la categorie.." required>
                       </div>
                     </div>
                     <input class="btn btn-primary" type="submit" value="Submit">

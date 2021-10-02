@@ -19,7 +19,7 @@
                         <th>Image</th>
                         <th>Description du slider</th>
                         
-                        
+                        <th> Status</th>
                         <th>Actions</th>
                     </tr>
                   </thead>
@@ -32,8 +32,24 @@
   <td><img src="/storage/slider_images/{{$slider->slider_image}}"></td>
  <td>{{$slider->slider_name}}</td>
   <td>{{$slider->slider_description}}</td>
-  
+  <td>
+      @if($slider->slider_status==1)
+      <label class="badge badge-success">Active</label> </td>     
+      @else
+      <label class="badge badge-danger">Desactive</label> </td>      
+      @endif
+    
+    </td>
      <td>
+      @if($slider->slider_status==1)
+      <button class="btn btn-outline-warning"  onclick="window.location='{{url('/desactiverslider/'.$slider->id)}}'">désactiver</button>
+              
+      @else
+      <button class="btn btn-outline-success"  onclick="window.location='{{url('/activerslider/'.$slider->id)}}'">activer</button>
+         
+      <a  href="" id="delete"></a>
+         
+      @endif
   <a class="btn btn-outline-danger" href="{{url('/del_slider/'.$slider->id)}}"   id="delete">delete</a>
   </td>
 </tr>  

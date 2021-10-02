@@ -29,7 +29,7 @@ use App\Http\Controllers\ShopController;
 Route::get('/', [ClientController::class, 'home']);
 Route::get('/aboutus', [ClientController::class, 'aboutus']);
 Route::get('/contact', [ClientController::class, 'contact']);
-Route::get('/categoriesInC', [ClientController::class, 'categories']);
+Route::get('/client_categories', [ClientController::class, 'categories']);
 
 
 
@@ -88,7 +88,8 @@ Route::get('/sliders', [SliderController::class,'sliders']);
 Route::get('/new_slider', [SliderController::class,'new_slider']);
 Route::post('/post_slider', [SliderController::class,'post_slider']);
 Route::get('/del_slider/{id}',[SliderController::class,'del_slider']);
-
+Route::get('/activerslider/{id}',[SliderController::class,'active_slider']);
+Route::get('/desactiverslider/{id}',[SliderController::class,'desactive_slider']);
 //Shop
 Route::get('/shops', [ShopController::class,'list_shops']);
 Route::get('/new_shop', [ShopController::class,'new_shop']);

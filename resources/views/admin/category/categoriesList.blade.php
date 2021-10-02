@@ -32,26 +32,19 @@
     <a class="btn btn-outline-danger" href="{{url('/del_category/'.$category->id)}}" id="delete">Delete</a>             
     </td>
 </tr>
-
-
-
  {{$inc+=1}}
+ 
  @endforeach 
+ 
 @else
 <h2 class="alert alert-success"> Aucun categorie trouver dans la liste des categories </h2>
     
 @endif
-
-
-                
-                  
-                   
-                    
-              
-                    
-                  </tbody>
+</tbody>
                 </table>
               </div>
+              <div style="text-align: right">{{$categories->links()}}</div>
+              
             </div>
           </div>
         </div>

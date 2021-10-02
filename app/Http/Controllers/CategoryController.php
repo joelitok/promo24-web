@@ -9,7 +9,7 @@ class CategoryController extends Controller
 {
     //
 public function categories(){
-        $categories=Category::get();
+        $categories=Category::simplepaginate(5);
         return view('admin.category.categoriesList')->with('categories',$categories);
 }
 
@@ -18,9 +18,12 @@ public function new_category(){
 }
 
 
-public function post_category(Request $request){ 
-$category=new Category();     
+public function post_category(Request $request){
+
+$category=new Category();
 $category->category_name = $request->input('category_name');
+
+
 $category->save();
 return redirect('/new_category')->with('status','La  catégorie     '.$category->category_name.'     a été ajouté ');
                                                 }
