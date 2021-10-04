@@ -39,7 +39,7 @@
       @if($slider->slider_status==1)
       <label class="badge badge-success">Active</label> </td>     
       @else
-      <label class="badge badge-danger">Desactive</label> </td>      
+      <label class="badge badge-danger">Désactive</label> </td>      
       @endif
     
     </td>
