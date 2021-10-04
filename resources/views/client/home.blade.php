@@ -23,8 +23,11 @@
                     </div>   -->
                     @if($sliders)
                     @foreach ($sliders as $slider)
-                    <div class="home-slide" style="background-image: url('{{asset('/storage/slider_images/'.$slider->slider_image)}}');">
-                        
+                    {{-- <div class="home-slide" style="background-image: url('{{asset('/storage/slider_images/'.$slider->slider_image)}}');">
+                         --}}
+                     <div class="home-slide" style="background-image: url('{{ URL::to('/') }}/slider_images/{{ $slider->slider_image}}');">
+                         
+                        {{-- <img src="{{ URL::to('/') }}/slider_images/{{ $slider->slider_image}}" alt=""> --}}
                         <div class="slide-content content-left">
                             <h2 class="text-left">Meilleur Promotion<br>{{$slider->slider_name}}</h2>
                             <div class="skew-box-group">

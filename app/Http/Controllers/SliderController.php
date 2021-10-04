@@ -28,49 +28,68 @@ class SliderController extends Controller
     ]);
 
         if($request->hasFile('slider_image')){
-            //1 get file name with extension
-        
-            $fileNameWithExt=$request->file('slider_image')->getClientOriginalName();
-            //2 file name without extension
-        
-            $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
-        
-            //3 get extension
-           $extension=$request->file('slider_image')->getClientOriginalExtension();
-        
-            //4 rename image to store
-            $fileNameToStore=$fileName.'_'.time().'.'.$extension;
-        
-            $path =$request->file('slider_image')->storeAs('public/slider_images',
-           $fileNameToStore);
 
+        //methode 1
+        //     //1 get file name with extension
+        
+        //     $fileNameWithExt=$request->file('slider_image')->getClientOriginalName();
+        //     //2 file name without extension
+        
+        //     $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
+        
+        //     //3 get extension
+        //    $extension=$request->file('slider_image')->getClientOriginalExtension();
+        
+        //     //4 rename image to store
+        //     $fileNameToStore=$fileName.'_'.time().'.'.$extension;
+        
+        //     $path =$request->file('slider_image')->storeAs('public/slider_images',
+        //    $fileNameToStore);
+        
+
+        //autre methode 
        //$img = Storage::disk('public')->put('slider_images', $request->slider_image);
+
+       //methode 2
+        $image = $request->file('slider_image');
+        $new_name_image = rand() . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('slider_images'), $new_name_image);
          
         }else{
-         $fileNameToStore = 'noimage.jpg';
-      // $request->slider_image='noimage.jpg';
+         
+        //methode 1 
+     //   $fileNameToStore = 'noimage.jpg';
+
+
+
+
+
+
+         //autre methode 
+        // $request->slider_image='noimage.jpg';
         }
         $slider=new Slider();     
         $slider->slider_name = $request->input('slider_name');
         $slider->slider_price = $request->input('slider_price');
         $slider->slider_description = $request->input('slider_description');
         $slider->slider_status =1;
-        $slider->slider_image = $fileNameToStore;
+        $slider->slider_image = $new_name_image;                  
         $slider->save();
         return redirect('/new_slider')->with('status', 'Le   Slider ' .$slider->slider_name.'     a été ajouté');
 
 
-  //                               dossier     image($request->avatar)
-
-   // Storage::disk('local')->put('exemple.txt','Contents');
-  /* if(Storage::disk('local')->exists('file.jpg')){
-   } if(Storage::disk('local')->missing('file.jpg')){
-   }*/
-  /*  $name=Storage::disk('local')->put('exemple.txt','Contents');
-   Storage::download($name);
-   Storage::url($name); */
-//   $fileName =time().'.'.$request->avatar->extension();
-//    $request->file('avatar')->storeAs('avatarstest2',$fileName,'public');
+        
+                               
+//autres methode de sauvegade d'image
+// Storage::disk('local')->put('exemple.txt','Contents');
+// if(Storage::disk('local')->exists('file.jpg')){
+// } if(Storage::disk('local')->missing('file.jpg')){
+//    }
+// $name=Storage::disk('local')->put('exemple.txt','Contents');
+// Storage::download($name);
+// Storage::url($name); 
+// $fileName =time().'.'.$request->avatar->extension();
+// $request->file('avatar')->storeAs('avatarstest2',$fileName,'public');
 
 
 
