@@ -50,7 +50,7 @@ Route::get('/dashboard',[AdminController::class, 'dashboard']);
 Route::get('/cities',[CityController::class, 'cities']);
 Route::get('/new_city',[CityController::class, 'new_city']);
 Route::post('/post_city',[CityController::class, 'post_city']);
-Route::post('/del_city/{id}',[CityController::class, 'del_city']);
+Route::get('/del_city/{id}',[CityController::class, 'del_city']);
 
 
 
@@ -66,6 +66,8 @@ Route::get('/desactiverproduct/{id}',[ProductController::class,'desactiver_produ
 Route::get('/activerproduct/{id}',[ProductController::class,'activer_product']);
 Route::get('/list_promo_products',[ProductController::class,'list_promo_products']);
 Route::get('/del_p_product/{id}',[ProductController::class,'del_p_product']);
+Route::get('/product_detail/{id}/{category}',[ProductController::class,'product_detail']);
+
 
 
 

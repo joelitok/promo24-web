@@ -37,13 +37,13 @@
  @endforeach 
  
 @else
-<h2 class="alert alert-success"> Aucun categorie trouver dans la liste des categories </h2>
+<h2 class="alert alert-success"> Aucun catégorie trouver dans la liste des catégories </h2>
     
 @endif
 </tbody>
                 </table>
               </div>
-              <div style="text-align: right">{{$categories->links()}}</div>
+              <div style="text-align: right">{{$categories->onEachSide(5)->links()}}</div>
               
             </div>
           </div>

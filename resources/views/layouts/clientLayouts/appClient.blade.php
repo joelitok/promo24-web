@@ -37,7 +37,7 @@
 <body>
     <div class="page-wrapper">
         <header class="header">
-            <div class="header-top">
+        {{--   <div class="header-top">
                 <a href="#">
                     <img src="{{asset('frontend/images/banners/header_item.png')}}">
                     <h3>PortoPlus X Pro Only</h3>
@@ -45,7 +45,7 @@
                     <span class="old-price">299FCFA</span>
                     <span class="round-box">code: <strong>portoplusx</strong></span>
                 </a>
-            </div><!-- End .header-top -->
+            </div>    --}} <!-- End .header-top -->
 
             <div class="header-middle">
                 <div class="container">
@@ -63,26 +63,16 @@
                             <a href="#" class="search-toggle" role="button"><i class="icon-magnifier"></i></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
-                                    <input type="search" class="form-control" name="q" id="q" placeholder="I'm searching for..." required>
+                                    <input type="search" class="form-control" name="q" id="q" placeholder="rechercher.." required>
                                     <div class="select-custom">
                                         <select id="cat" name="cat">
-                                            <option value="">All Categories</option>
-                                            <option value="4">Fashion</option>
-                                            <option value="12">- Women</option>
-                                            <option value="13">- Men</option>
-                                            <option value="66">- Jewellery</option>
-                                            <option value="67">- Kids Fashion</option>
-                                            <option value="5">Electronics</option>
-                                            <option value="21">- Smart TVs</option>
-                                            <option value="22">- Cameras</option>
-                                            <option value="63">- Games</option>
-                                            <option value="7">Home &amp; Garden</option>
-                                            <option value="11">Motors</option>
-                                            <option value="31">- Cars and Trucks</option>
-                                            <option value="32">- Motorcycles &amp; Powersports</option>
-                                            <option value="33">- Parts &amp; Accessories</option>
-                                            <option value="34">- Boats</option>
-                                            <option value="57">- Auto Tools &amp; Supplies</option>
+                                            @if($categories)
+                                            @foreach ($categories as $category)
+                                             <option >{{$category->category_name}}</option>
+                                            @endforeach
+                                            @endif
+                                            
+                                            
                                         </select>
                                     </div><!-- End .select-custom -->
                                     <button class="btn" type="submit"><i class="icon-magnifier"></i></button>
@@ -190,20 +180,55 @@
                                     <div class="row row-sm">
                                         <div class="col-lg-3">
                                             <a href="#" class="nolink">Douala</a>
-                                            <ul class="submenu">
-                                                <li><a href="#">phamacie 1</a></li>
-                                                <li><a href="#">magazin 1</a></li>
-                                                <li><a href="#">boulengerie 1</a></li>
-                                            </ul>
-                                        </div><!-- End .col-lg-4 -->
+                                            @if($shops)
+                                              @foreach ($shops as $shop)
+                                              <ul class="submenu">
+                                            @if($shop->shop_city_name=='Douala')
+                                               <li><a href="#">{{$shop->shop_name}}</a></li>
+                                              </ul>
+                                            @endif
+                                              @endforeach   
+                                            @endif
+                                            
+                                        </div>
+                                        
                                         <div class="col-lg-3">
+                                            <a href="#" class="nolink">Bafoussam</a>
+                                            @if($shops)
+                                              @foreach ($shops as $shop)
+                                              <ul class="submenu">
+                                            @if($shop->shop_city_name=='Bafoussam')
+                                               <li><a href="#">{{$shop->shop_name}}</a></li>
+                                              </ul>
+                                            @endif
+                                              @endforeach   
+                                            @endif
+                                            
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <a href="#" class="nolink">Yaoundé</a>
+                                            @if($shops)
+                                              @foreach ($shops as $shop)
+                                              <ul class="submenu">
+                                            @if($shop->shop_city_name=='Yaoundé')
+                                               <li><a href="#">{{$shop->shop_name}}</a></li>
+                                              </ul>
+                                            @endif
+                                              @endforeach   
+                                            @endif
+                                            
+                                        </div>
+
+
+
+                                     <!--   <div class="col-lg-3">
                                             <a href="#" class="nolink">Youande</a>
                                             <ul class="submenu">
                                                 <li><a href="#">phamacie 2</a></li>
                                                 <li><a href="#">magazin 2</a></li>
                                                 <li><a href="#">boulengerie 2</a></li>
                                             </ul>
-                                        </div><!-- End .col-lg-4 -->
+                                        </div>
                                         <div class="col-lg-3">
                                             <a href="#" class="nolink">Bafoussam</a>
                                             <ul class="submenu">
@@ -212,7 +237,7 @@
                                                 <li><a href="#">boulengerie 3</a></li>
                                                 
                                             </ul>
-                                        </div><!-- End .col-lg-4 -->
+                                        </div>  -->
 
                                         <div class="col-lg-3 image-container">
                                             <img src="{{asset('frontend/images/menu-banner-1.jpg')}}" alt="Menu banner" class="product-promo">
@@ -234,21 +259,11 @@
                             <a href="#" class="link-seller">Become a Seller</a>
                         </div>
                         <div class="header-dropdown">
-                            <a href="#">USD</a>
+                            <a href="#">ANGLAIS</a>
                             <div class="header-menu">
                                 <ul>
-                                    <li><a href="#">EUR</a></li>
-                                    <li><a href="#">USD</a></li>
-                                </ul>
-                            </div><!-- End .header-menu -->
-                        </div><!-- End .header-dropown -->
-
-                        <div class="header-dropdown">
-                            <a href="#">ENG</a>
-                            <div class="header-menu">
-                                <ul>
-                                    <li><a href="#">ENGLISH</a></li>
-                                    <li><a href="#">FRENCH</a></li>
+                                    <li><a href="#">ANGLAIS</a></li>
+                                    <li><a href="#">FRANCAIS</a></li>
                                 </ul>
                             </div><!-- End .header-menu -->
                         </div><!-- End .header-dropown -->
@@ -299,51 +314,123 @@
             <span class="mobile-menu-close"><i class="icon-retweet"></i></span>
             <nav class="mobile-nav">
                 <ul class="mobile-menu">
-                    <li class="active"><a href="{{URL::to('/')}}">Accueil</a></li>
+                    <li class="active"><a href="index.html">Accueil</a></li>
                     
                     <li>
                         <a href="product.html">Villes</a>
                         <ul>
+                              
                             <li>
                                 <a href="#">Douala</a>
                                 <ul>
-                                   <li><a href="#">Phamacie 1</a></li>
-                                    <li><a href="#">Magazin 1</a></li>
-                                    <li><a href="#">Boulangerie 1</a></li>
+                                    @if($shops)
+                                    @foreach ($shops as $shop)
+                                    @if($shop->shop_city_name=='Douala')
+                                    <li><a href="#">{{$shop->shop_name}}</a></li>
+                                    @endif
+                                    @endforeach 
+                                    @endif
                                 </ul>
+                               
                             </li>
                             <li>
-                                <a href="#">Yaounde</a>
+                                <a href="#">Yaoundé</a>
                                 <ul>
-                                   <li><a href="#">Phamacie 2</a></li>
-                                    <li><a href="#">Magazin 2</a></li>
-                                    <li><a href="#">Boulangerie 2</a></li>
+                                    @if($shops)
+                                    @foreach ($shops as $shop)
+                                    @if($shop->shop_city_name=='Yaoundé')
+                                    <li><a href="#">{{$shop->shop_name}}</a></li>
+                                    @endif
+                                    @endforeach 
+                                    @endif
                                 </ul>
+                               
                             </li>
                             <li>
                                 <a href="#">Bafoussam</a>
                                 <ul>
-                                <li><a href="#">Phamacie 3</a></li>
-                                    <li><a href="#">Magazin 3</a></li>
-                                    <li><a href="#">Boulangerie 3</a></li>
+                                    @if($shops)
+                                    @foreach ($shops as $shop)
+                                    @if($shop->shop_city_name=='Bafoussam')
+                                    <li><a href="#">{{$shop->shop_name}}</a></li>
+                                    @endif
+                                    @endforeach 
+                                    @endif
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    
-                    <li><a href="{{URL::to('/aboutus')}}">A propos</a>
-                       
-                    </li>
+                   
+                    <li><a href="{{URL::to('/aboutus')}}">A propos</a></li>
                     <li><a href="{{URL::to('/contact')}}">Contact</a></li>
-                    <li><a href="{{URL::to('/client_categories')}}">Categories</a></li>
+                    <li><a href="{{URL::to('/client_categories')}}">Catégories</a></li>
                     <li><a href="#">Nous suivre</a></li>
+               <li>
+                
+                    <a href="#">TRADUIRE</a>
+                        <ul>
+                            <li><a href="#">ANGLAIS</a></li>
+                            <li><a href="#">FRANCAIS</a></li>
+                        </ul>
+               </li>
                 </ul>
-            </nav>     <!-- End .mobile-nav -->
+            </nav>     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
             <div class="social-icons">
                 <a href="#" class="social-icon" target="_blank"><i class="icon-facebook"></i></a>
                 <a href="#" class="social-icon" target="_blank"><i class="icon-twitter"></i></a>
                 <a href="#" class="social-icon" target="_blank"><i class="icon-instagram"></i></a>
+           
             </div><!-- End .social-icons -->
         </div><!-- End .mobile-menu-wrapper -->
         </div><!-- End .mobile-menu-container -->

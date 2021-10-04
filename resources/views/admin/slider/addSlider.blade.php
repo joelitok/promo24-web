@@ -42,6 +42,15 @@
                       </div>
                     </div>
 
+                    <div class="form-group row">
+                      <div class="col-lg-3">
+                        <label class="col-form-label">Prix :</label>
+                      </div>
+                      <div class="col-lg-8">
+                        <input class="form-control" maxlength="1000" name="slider_price" type="number" placeholder="Prix du Slider.." required>
+                      </div>
+                    </div>
+
 
                     <div class="form-group row">
                       <div class="col-lg-3">

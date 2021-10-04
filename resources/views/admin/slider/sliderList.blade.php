@@ -16,6 +16,7 @@
                     <tr>
                         <th>Ordre #</th>
                         <th>Nom du slider</th>
+                        <th>Prix</th>
                         <th>Image</th>
                         <th>Description du slider</th>
                         
@@ -31,6 +32,7 @@
   <td>{{$increment}}</td>
   <td><img src="/storage/slider_images/{{$slider->slider_image}}"></td>
  <td>{{$slider->slider_name}}</td>
+ <td>{{$slider->slider_price}}</td>
   <td>{{$slider->slider_description}}</td>
   <td>
       @if($slider->slider_status==1)

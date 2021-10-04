@@ -74,8 +74,8 @@
                 <li class="nav-item"><a class="nav-link" href="{{URL::to('/cities')}}">Villes</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{URL::to('/shops')}}">Boutiques</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{URL::to('/categories')}}">Cat&eacute;gories</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{URL::to('/list_products')}}">Produires</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{URL::to('/list_promo_products')}}">Produires en promotions</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{URL::to('/list_products')}}">Produits</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{URL::to('/list_promo_products')}}">Produits en promotions</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{URL::to('/sliders')}}">Slides</a></li>
 
                <!-- <li> &agrave;&Agrave;&aelig;&egrave;&eacute;&copy;</li>  -->
@@ -93,8 +93,8 @@
                 <li class="nav-item"><a class="nav-link" href="{{URL::to('/new_city')}}">Ville</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{URL::to('/new_shop')}}">Boutique</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{URL::to('/new_category')}}">Cat&eacute;gorie</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{URL::to('/new_product')}}">Produire</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{URL::to('/new_product_promotion')}}">Produit de promotion</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{URL::to('/new_product')}}">Produits</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{URL::to('/new_product_promotion')}}">Produits de promotion</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{URL::to('/new_slider')}}">Slide</a></li>
               </ul>
             </div>

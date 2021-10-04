@@ -13,7 +13,7 @@ use Storage;
 class ProductController extends Controller
 {
     //
-
+//affichier le formulaire d'ajout
     public function new_product_promotion(){
         $categories=Category::get();
         $cities=City::get();
@@ -24,6 +24,8 @@ class ProductController extends Controller
         ->with('shops',$shops);
     }
 
+
+    //affichier le formulaire d ajout de produit
     public function new_product(){
         $categories=Category::get();
         $cities=City::get();
@@ -35,6 +37,8 @@ class ProductController extends Controller
         ->with('shops',$shops);
     }
 
+
+    //ajouter une image
     public function post_product(Request $request){ 
 
         $this->validate($request,
@@ -44,7 +48,7 @@ class ProductController extends Controller
         'product_shop'=>'required',
         'product_category'=>'required',
         'product_city'=>'required',
-        'product_image'=>'image| nullable|max:1999'
+        'product_image'=>'image|nullable|max:1999'
     ]);
 
 
@@ -78,15 +82,20 @@ class ProductController extends Controller
         $product->product_status =1;
         $product->product_image = $fileNameToStore;
         $product->save();
-        return redirect('/new_product')->with('status', 'Le   produit  ' 
+        return redirect('/new_product')->with('status', 'Le produit ' 
         .$product->product_name.'     a été ajouté');
 }
 
+
+
+//affichier la liste des produits
 public function list_products(){
     $products=Product::get();
     return view('admin.product.productsList')->with('products',$products);
 }
 
+
+//supprimer un produire et son images
 public function del_product($id){
     $product=Product::find($id);
     if($product->product_image!='noimage.jpg'){
@@ -99,8 +108,10 @@ public function del_product($id){
 
 
 
-public function update_product(Request $request){
 
+
+//fonction pour modifier un produit
+public function update_product(Request $request){
     $product = Product::find($request->input('id'));
     $product->product_name = $request->input('product_name');
     $product->product_description = $request->input('product_description');
@@ -136,8 +147,7 @@ public function update_product(Request $request){
         //4 renamane image to store
         $fileNameToStore=$fileName.'_'.time().''.$extension;
     
-        $path =$request->file('product_image')->storeAs('public/product_images',
-        $fileNameToStore);
+        $path =$request->file('product_image')->storeAs('public/product_images', $fileNameToStore);
     
         if($product->product_image!='noimage.jpg'){
             Storage::delete('public/product_images/'.$product->image);
@@ -149,46 +159,55 @@ public function update_product(Request $request){
     return redirect('/list_products')->with('status', 'le produit '.$product->product_name.' a été modifier avec succès');
 }
 
-public function edit_product($id){
 
+
+
+//éditer un produit
+public function edit_product($id){
     $product=Product::find($id);
     $categories=Category::get();
     $cities =City::get();
     $shops=Shop::get();
     return view('admin.product.editProduct')->with('product', $product)
     ->with('categories',$categories)->with('cities',$cities)->with('shops',$shops);
-
 }
 
 
-
+//désactivé un produit
 public function desactiver_product($id){
     $product=Product::find($id);
     $product->product_status=0;
     $product->update();
-    return redirect('/list_products')->with('status', 'le produit '.$product->product_name.' a ete desactiver avec succes');
+    return redirect('/list_products')
+    ->with('status', 'le produit '.$product->product_name.' a été désactiver avec succès');
 
 }
 
+
+//activer un produit
 public function activer_product($id){
     $product=Product::find($id);
     $product->product_status=1;
     $product->update();
-    return redirect('/list_products')->with('status', 'le produit '.$product->product_name.' a ete dactiver avec succes');
+    return redirect('/list_products')
+    ->with('status', 'le produit '.$product->product_name.' a été désactiver avec succès');
 
 }
 
 
 
-
-
-
-
-
-
-
-
-
+//voir la parti detail de notre application 
+public function product_detail($id,$category){
+    $product=Product::find($id);
+    $products=Product::where('product_category',$category)->limit(3)->get();
+    $shops=Shop::get();
+    $categories=Category::get();
+    return view('client.product_detail')
+    ->with('product',$product)
+    ->with('shops',$shops)
+    ->with('products', $products)
+    ->with('categories',$categories);
+}
 
 
 
@@ -262,8 +281,8 @@ public function post_product_promotion(Request $request){
     $productPromo->p_product_status =1;
     $productPromo->p_product_image = $fileNameToStore;
     $productPromo->save();
-    return redirect('/new_product_promotion')->with('status', 'Le   produit  '
-     .$productPromo->p_product_name.'     a été ajouté');
+    return redirect('/new_product_promotion')->with('status', 'Le produit  '
+     .$productPromo->p_product_name.'     à été ajouté');
 }
 
 

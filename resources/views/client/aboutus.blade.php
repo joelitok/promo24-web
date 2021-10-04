@@ -3,7 +3,7 @@
 <main class="main">
     <div class="page-header page-header-bg" style="background-image: url('{{asset('frontend/images/banners/banner-top.jpg')}}');">
         <div class="container">
-            <h1>About Us</h1>
+            <h1>A propos</h1>
         </div><!-- End .container -->
     </div><!-- End .page-header -->
 
@@ -12,7 +12,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>
                 <li class="breadcrumb-item active" aria-current="page">
-                about us</li>
+                A propos</li>
             </ol>
         </div><!-- End .container -->
     </nav>

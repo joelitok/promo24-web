@@ -16,12 +16,13 @@ public function shop_list(){
 }
 public function post_shop(Request $request){
     
-    $shop=new Shop();     
+    $shop=new Shop();  
+    $cities=City::get();   
     $shop->shop_name = $request->input('shop_name');
     $shop->shop_description = $request->input('shop_description');
     $shop->shop_city_name = $request->input('shop_city_name');
     $shop->save();
-    return redirect('/shops')->with('status','La   Boutiques    '.$shop->shop_name.'   a été ajouté ');
+    return redirect('/new_shop')->with('cities', $cities)->with('status','La   Boutiques   '.$shop->shop_name.'   a été ajouté ');
       
 }
 

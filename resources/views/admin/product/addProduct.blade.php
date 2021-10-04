@@ -113,15 +113,37 @@
                      
                      
 
-                      <div class="form-group row">
-                        <div class="col-lg-3">
-                          <label class="col-form-label">Image</label>
-                        </div>
-                        <div class="col-lg-8">
-                          <input  class="form-control" name="p_product_image" type="file">
-                        </div>
-                      </div>
+<div class="form-group row">
+<div class="col-lg-3">
+<label class="col-form-label" id="colId">Image</label>
+</div>
+<div class="col-lg-8">
+<label class="btn btn-outline-success btn-file">Selectionné une Image 
+<input  class="form-control " name="product_image" type="file" id="product_image_id"  onchange="PreviewImage();">
+</label>
+<img id="uploadPreview" style="width:100px; height:100px"/>                 
+</div>
+</div>  
 
+ <!--<div class="form-group row">
+  <div class="col-lg-3">
+    <label class="col-form-label">Image</label>
+  </div>
+  <div class="col-lg-8">
+    <input  class="form-control" name="product_image" type="file" required>
+  </div>
+</div> -->
+<!--<img id="uploadPreview" style="width:100px; height:100px"/>
+<input id="uploadImage" type="file" name="myPhoto" onchange="PreviewImage();"> -->
+                    
+                     <script type="text/javascript">
+                       function PreviewImage(){
+                       var oFReader = new FileReader();
+                          oFReader.readAsDataURL(document.getElementById("product_image_id").files[0]);
+                          oFReader.onload =function (oFREvent){
+                          document.getElementById("uploadPreview").src = oFREvent.target.result;
+                          }}
+                     </script>
                     <input class="btn btn-primary" type="submit" value="Submit">
                     <a href="{{URL::to('/products')}}" class="btn btn-danger">Annuler</a>
                     

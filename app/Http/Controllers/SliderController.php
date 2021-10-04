@@ -49,6 +49,7 @@ class SliderController extends Controller
         }
         $slider=new Slider();     
         $slider->slider_name = $request->input('slider_name');
+        $slider->slider_price = $request->input('slider_price');
         $slider->slider_description = $request->input('slider_description');
         $slider->slider_status =1;
         $slider->slider_image = $fileNameToStore;

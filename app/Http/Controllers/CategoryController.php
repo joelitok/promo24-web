@@ -9,7 +9,7 @@ class CategoryController extends Controller
 {
     //
 public function categories(){
-        $categories=Category::simplepaginate(5);
+        $categories=Category::simplepaginate(2);
         return view('admin.category.categoriesList')->with('categories',$categories);
 }
 
@@ -25,14 +25,14 @@ $category->category_name = $request->input('category_name');
 
 
 $category->save();
-return redirect('/new_category')->with('status','La  catégorie     '.$category->category_name.'     a été ajouté ');
+return redirect('/new_category')->with('status','La  catégorie'.$category->category_name.'     à été ajouté ');
                                                 }
 
 
 public function del_category($id){
 $category=Category::find($id);
 $category->delete();
-return redirect('/categories')->with('status','La categorie    '.$category->citegory_name.'       à été supprimé');
+return redirect('/categories')->with('status','La catégorie'.$category->citegory_name.'       à été supprimé');
                                                                    }
 
                                                

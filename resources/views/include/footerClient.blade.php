@@ -7,7 +7,7 @@
                             <a href="#" class="widget-newsletter-title">Enregistrer vous a la Newsletter</a>
                         </div>
                         <div class="col-lg-4">
-                            <p class="widget-newsletter-content">Pour recevoir tous les informations par rapport aux promotions sur notre site <br>
+                            <p class="widget-newsletter-content">Pour recevoir les informations de promotions  <br>
                                 <span class="widget-newsletter-content">Et obtener un coupon de 10 000 FCFA pour vos achats</span>
                             </p>
                         </div>
@@ -33,13 +33,15 @@
                                 <div class="col-sm-6">
                                     <div class="contact-widget">
                                         <h4 class="widget-title">ADDRESS</h4>
-                                        <a href="#">Douala,Yaounde,Bafoussam au Cameroun</a>
+                                        <a href="#">Douala </a>
+                                        <a href="#">Yaoundé</a>
+                                        <a href="#">Bafoussam</a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="contact-widget email">
                                         <h4 class="widget-title">EMAIL</h4>
-                                        <a href="mailto:mail@example.com">mail@example.com</a>
+                                        <a href="mailto:mail@example.com">contact@promo24.com</a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -100,7 +102,7 @@
                 </div>
         
                 <div class="footer-bottom">
-                    <p class="footer-copyright">PromO 24 &copy;  2021.  Tous droit reserve</p>
+                    <p class="footer-copyright">Promo 24 &copy;  2021.  Tous droit reserve</p>
                     <img src="{{asset('frontend/images/payments_long.png')}}" width="180px" style="max-height: 24px">
                 </div>
             </div>
