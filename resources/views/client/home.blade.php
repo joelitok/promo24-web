@@ -232,6 +232,7 @@
                     </div>
                     <a href="" class="btn-quickview" title="Quick View" onclick="window.location='{{url('/product_detail/'.$product->id.'/'.$product->product_category)}}'">Voir Plus</a>
                 </figure>
+                
                 <div class="product-details">
                     <div class="category-wrap">
                         <div class="category-list">
