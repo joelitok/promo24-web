@@ -219,7 +219,9 @@
             <div class="product-default inner-quickview inner-icon">
                 <figure>
                     <a href="#">
-                        <img src="{{asset('/storage/product_images/'.$product->product_image)}}">
+                        {{-- <img src="{{asset('/storage/product_images/'.$product->product_image)}}"> --}}
+                        <img src="{{ URL::to('/') }}/product_images/{{ $product->product_image}}" alt="">
+                        
                     </a>
                     <div class="label-group">
                         <span class="product-label label-cut">27% OFF</span>

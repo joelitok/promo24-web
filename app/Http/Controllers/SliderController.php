@@ -60,7 +60,8 @@ class SliderController extends Controller
         //methode 1 
      //   $fileNameToStore = 'noimage.jpg';
 
-
+      //methode 2
+       $new_name_image='noimage.jpg';
 
 
 
