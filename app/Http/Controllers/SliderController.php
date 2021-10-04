@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Slider;
-use Storage;
+use Illuminate\Support\Facades\Storage;
 
 class SliderController extends Controller
 {
@@ -36,16 +36,19 @@ class SliderController extends Controller
             $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
         
             //3 get extension
-            $extension=$request->file('slider_image')->getClientOriginalExtension();
+           $extension=$request->file('slider_image')->getClientOriginalExtension();
         
-            //4 renamane image to store
-            $fileNameToStore=$fileName.'_'.time().''.$extension;
+            //4 rename image to store
+            $fileNameToStore=$fileName.'_'.time().'.'.$extension;
         
             $path =$request->file('slider_image')->storeAs('public/slider_images',
-            $fileNameToStore);
-        
+           $fileNameToStore);
+
+       //$img = Storage::disk('public')->put('slider_images', $request->slider_image);
+         
         }else{
          $fileNameToStore = 'noimage.jpg';
+      // $request->slider_image='noimage.jpg';
         }
         $slider=new Slider();     
         $slider->slider_name = $request->input('slider_name');
@@ -55,7 +58,49 @@ class SliderController extends Controller
         $slider->slider_image = $fileNameToStore;
         $slider->save();
         return redirect('/new_slider')->with('status', 'Le   Slider ' .$slider->slider_name.'     a été ajouté');
-}
+
+
+  //                               dossier     image($request->avatar)
+
+   // Storage::disk('local')->put('exemple.txt','Contents');
+  /* if(Storage::disk('local')->exists('file.jpg')){
+   } if(Storage::disk('local')->missing('file.jpg')){
+   }*/
+  /*  $name=Storage::disk('local')->put('exemple.txt','Contents');
+   Storage::download($name);
+   Storage::url($name); */
+//   $fileName =time().'.'.$request->avatar->extension();
+//    $request->file('avatar')->storeAs('avatarstest2',$fileName,'public');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 
 
 
@@ -91,8 +136,13 @@ public function active_slider($id){
     $slider->slider_status=1;
     $slider->update();
     return redirect('/sliders')->with('status',  ' le slider a été activer avec succès');
+   
+   
+ 
+
 
 }
+
 
 
 

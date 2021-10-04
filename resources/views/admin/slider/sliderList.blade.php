@@ -30,7 +30,8 @@
 @foreach ($sliders as $slider)
 <tr>
   <td>{{$increment}}</td>
-  <td><img src="/storage/slider_images/{{$slider->slider_image}}"></td>
+ <td><img src="/storage/slider_images/{{$slider->slider_image}}"></td> 
+  {{-- <td> <img src="{{Storage::url()}}"></td> --}}
  <td>{{$slider->slider_name}}</td>
  <td>{{$slider->slider_price}}</td>
   <td>{{$slider->slider_description}}</td>

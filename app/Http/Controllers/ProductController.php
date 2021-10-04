@@ -64,7 +64,7 @@ class ProductController extends Controller
             $extension=$request->file('product_image')->getClientOriginalExtension();
         
             //4 renamane image to store
-            $fileNameToStore=$fileName.'_'.time().''.$extension;
+            $fileNameToStore=$fileName.'_'.time().'.'.$extension;
         
             $path =$request->file('product_image')->storeAs('public/product_images',
             $fileNameToStore);
@@ -145,7 +145,7 @@ public function update_product(Request $request){
         $extension=$request->file('product_image')->getClientOriginalExtension();
     
         //4 renamane image to store
-        $fileNameToStore=$fileName.'_'.time().''.$extension;
+        $fileNameToStore=$fileName.'_'.time().'.'.$extension;
     
         $path =$request->file('product_image')->storeAs('public/product_images', $fileNameToStore);
     
@@ -263,7 +263,7 @@ public function post_product_promotion(Request $request){
         $extension=$request->file('p_product_image')->getClientOriginalExtension();
     
         //4 renamane image to store
-        $fileNameToStore=$fileName.'_'.time().''.$extension;
+        $fileNameToStore=$fileName.'_'.time().'.'.$extension;
     
         $path =$request->file('p_product_image')->storeAs('public/product_images',
         $fileNameToStore);
