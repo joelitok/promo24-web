@@ -61,13 +61,13 @@
                         <h3>Offres Flash</h3>
                         <div class="product-default">
                             <figure>
-                                <a href="product.html">
+                                <a href="#">
                                     <img src="{{asset('frontend/images/products/product-deal.jpg')}}">
                                 </a>
                             </figure>
                             <div class="product-details">
                                 <h2 class="product-title">
-                                    <a href="product.html">1080p Wifi IP Camera</a>
+                                    <a href="#">1080p Wifi IP Camera</a>
                                 </h2>
                                 <div class="ratings-container">
                                     <div class="product-ratings">
@@ -91,13 +91,13 @@
                         <h3>Flash Deals</h3>
                         <div class="product-default">
                             <figure>
-                                <a href="product.html">
+                                <a href="#">
                                     <img src="{{asset('frontend/images/products/product-deal.jpg')}}">
                                 </a>
                             </figure>
                             <div class="product-details">
                                 <h2 class="product-title">
-                                    <a href="product.html">1080p Wifi IP Camera</a>
+                                    <a href="#">1080p Wifi IP Camera</a>
                                 </h2>
                                 <div class="ratings-container">
                                     <div class="product-ratings">
@@ -121,13 +121,13 @@
                         <h3>Flash Deals</h3>
                         <div class="product-default">
                             <figure>
-                                <a href="product.html">
+                                <a href="#">
                                     <img src="{{asset('frontend/images/products/product-deal.jpg')}}">
                                 </a>
                             </figure>
                             <div class="product-details">
                                 <h2 class="product-title">
-                                    <a href="product.html">1080p Wifi IP Camera</a>
+                                    <a href="#">1080p Wifi IP Camera</a>
                                 </h2>
                                 <div class="ratings-container">
                                     <div class="product-ratings">
@@ -317,7 +317,7 @@
             }">
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
-                        <a href="product.html">
+                        <a href="#">
                             <img src="{{asset('frontend/images/products/product-13.jpg')}}">
                         </a>
                         <div class="label-group">
@@ -326,7 +326,7 @@
                         <div class="btn-icon-group">
                             <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="icon-bag"></i></button>
                         </div>
-                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick View</a>
+                        <a href="#" class="btn-quickview" title="Quick View">Quick View</a>
                     </figure>
                     <div class="product-details">
                         <div class="category-wrap">
@@ -336,7 +336,7 @@
                             <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
                         </div>
                         <h2 class="product-title">
-                            <a href="product.html">Product Short Name</a>
+                            <a href="#">Product Short Name</a>
                         </h2>
                         <div class="ratings-container">
                             <div class="product-ratings">
@@ -352,7 +352,7 @@
                 </div>
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
-                        <a href="product.html">
+                        <a href="#">
                             <img src="{{asset('frontend/images/products/product-12.jpg')}}">
                         </a>
                         <div class="label-group">
@@ -361,7 +361,7 @@
                         <div class="btn-icon-group">
                             <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="icon-bag"></i></button>
                         </div>
-                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick View</a>
+                        <a href="#" class="btn-quickview" title="Quick View">Quick View</a>
                     </figure>
                     <div class="product-details">
                         <div class="category-wrap">
@@ -371,7 +371,7 @@
                             <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
                         </div>
                         <h2 class="product-title">
-                            <a href="product.html">Product Short Name</a>
+                            <a href="#">Product Short Name</a>
                         </h2>
                         <div class="ratings-container">
                             <div class="product-ratings">
@@ -387,7 +387,7 @@
                 </div>
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
-                        <a href="product.html">
+                        <a href="#">
                             <img src="{{asset('frontend/images/products/product-13.jpg')}}">
                         </a>
                         <div class="label-group">
@@ -396,7 +396,7 @@
                         <div class="btn-icon-group">
                             <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="icon-bag"></i></button>
                         </div>
-                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick View</a>
+                        <a href="#" class="btn-quickview" title="Quick View">Quick View</a>
                     </figure>
                     <div class="product-details">
                         <div class="category-wrap">
@@ -406,7 +406,7 @@
                             <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
                         </div>
                         <h2 class="product-title">
-                            <a href="product.html">Product Short Name</a>
+                            <a href="#">Product Short Name</a>
                         </h2>
                         <div class="ratings-container">
                             <div class="product-ratings">
@@ -422,7 +422,7 @@
                 </div>
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
-                        <a href="product.html">
+                        <a href="#">
                             <img src="{{asset('frontend/images/products/product-14.jpg')}}">
                         </a>
                         <div class="label-group">
@@ -431,7 +431,7 @@
                         <div class="btn-icon-group">
                             <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="icon-bag"></i></button>
                         </div>
-                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick View</a>
+                        <a href="#" class="btn-quickview" title="Quick View">Quick View</a>
                     </figure>
                     <div class="product-details">
                         <div class="category-wrap">
@@ -441,7 +441,7 @@
                             <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
                         </div>
                         <h2 class="product-title">
-                            <a href="product.html">Product Short Name</a>
+                            <a href="#">Product Short Name</a>
                         </h2>
                         <div class="ratings-container">
                             <div class="product-ratings">
@@ -457,7 +457,7 @@
                 </div>
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
-                        <a href="product.html">
+                        <a href="#">
                             <img src="{{asset('frontend/images/products/product-15.jpg')}}">
                         </a>
                         <div class="label-group">
@@ -466,7 +466,7 @@
                         <div class="btn-icon-group">
                             <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="icon-bag"></i></button>
                         </div>
-                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick View</a>
+                        <a href="#" class="btn-quickview" title="Quick View">Quick View</a>
                     </figure>
                     <div class="product-details">
                         <div class="category-wrap">
@@ -476,7 +476,7 @@
                             <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
                         </div>
                         <h2 class="product-title">
-                            <a href="product.html">Product Short Name</a>
+                            <a href="#">Product Short Name</a>
                         </h2>
                         <div class="ratings-container">
                             <div class="product-ratings">
@@ -492,7 +492,7 @@
                 </div>
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
-                        <a href="product.html">
+                        <a href="#">
                             <img src="{{asset('frontend/images/products/product-16.jpg')}}">
                         </a>
                         <div class="label-group">
@@ -501,7 +501,7 @@
                         <div class="btn-icon-group">
                             <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="icon-bag"></i></button>
                         </div>
-                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick View</a>
+                        <a href="#" class="btn-quickview" title="Quick View">Quick View</a>
                     </figure>
                     <div class="product-details">
                         <div class="category-wrap">
@@ -511,7 +511,7 @@
                             <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
                         </div>
                         <h2 class="product-title">
-                            <a href="product.html">Product Short Name</a>
+                            <a href="#">Product Short Name</a>
                         </h2>
                         <div class="ratings-container">
                             <div class="product-ratings">

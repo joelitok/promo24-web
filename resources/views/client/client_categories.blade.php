@@ -4,7 +4,7 @@
     <nav aria-label="breadcrumb" class="breadcrumb-nav">
         <div class="container">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>
+                <li class="breadcrumb-item"><a href="#"><i class="icon-home"></i></a></li>
                 <li class="breadcrumb-item active" aria-current="page">
                 CATEGORIES</li>
             </ol>
@@ -64,7 +64,7 @@
                     <div class="col-6 col-md-4 col-lg-4">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
-                                <a href="product.html">
+                                <a href="#">
                                     <img src="{{asset('frontend/images/products/product-1.jpg')}}">
                                 </a>
                                 <div class="label-group">
@@ -83,7 +83,7 @@
                                     <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="product.html">Product Short Name</a>
+                                    <a href="#">Product Short Name</a>
                                 </h2>
                                 <div class="ratings-container">
                                     <div class="product-ratings">
@@ -101,7 +101,7 @@
                     <div class="col-6 col-md-4 col-lg-4">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
-                                <a href="product.html">
+                                <a href="#">
                                     <img src="{{asset('frontend/images/products/product-2.jpg')}}">
                                 </a>
                                 <div class="label-group">
@@ -120,7 +120,7 @@
                                     <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="product.html">Product Short Name</a>
+                                    <a href="#">Product Short Name</a>
                                 </h2>
                                 <div class="ratings-container">
                                     <div class="product-ratings">
@@ -138,7 +138,7 @@
                     <div class="col-6 col-md-4 col-lg-4">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
-                                <a href="product.html">
+                                <a href="#">
                                     <img src="{{asset('frontend/images/products/product-3.jpg')}}">
                                 </a>
                                 <div class="label-group">
@@ -157,7 +157,7 @@
                                     <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="product.html">Product Short Name</a>
+                                    <a href="#">Product Short Name</a>
                                 </h2>
                                 <div class="ratings-container">
                                     <div class="product-ratings">
@@ -175,7 +175,7 @@
                     <div class="col-6 col-md-4 col-lg-4">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
-                                <a href="product.html">
+                                <a href="#">
                                     <img src="{{asset('frontend/images/products/product-4.jpg')}}">
                                 </a>
                                 <div class="label-group">
@@ -194,7 +194,7 @@
                                     <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="product.html">Product Short Name</a>
+                                    <a href="#">Product Short Name</a>
                                 </h2>
                                 <div class="ratings-container">
                                     <div class="product-ratings">
@@ -212,7 +212,7 @@
                     <div class="col-6 col-md-4 col-lg-4">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
-                                <a href="product.html">
+                                <a href="#">
                                     <img src="{{asset('frontend/images/products/product-5.jpg')}}">
                                 </a>
                                 <div class="label-group">
@@ -231,7 +231,7 @@
                                     <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="product.html">Product Short Name</a>
+                                    <a href="#">Product Short Name</a>
                                 </h2>
                                 <div class="ratings-container">
                                     <div class="product-ratings">
@@ -249,7 +249,7 @@
                     <div class="col-6 col-md-4 col-lg-4">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
-                                <a href="product.html">
+                                <a href="#">
                                     <img src="{{asset('frontend/images/products/product-6.jpg')}}">
                                 </a>
                                 <div class="label-group">
@@ -268,7 +268,7 @@
                                     <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="product.html">Product Short Name</a>
+                                    <a href="#">Product Short Name</a>
                                 </h2>
                                 <div class="ratings-container">
                                     <div class="product-ratings">
@@ -286,7 +286,7 @@
                     <div class="col-6 col-md-4 col-lg-4">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
-                                <a href="product.html">
+                                <a href="#">
                                     <img src="{{asset('frontend/images/products/product-7.jpg')}}">
                                 </a>
                                 <div class="label-group">
@@ -305,7 +305,7 @@
                                     <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="product.html">Product Short Name</a>
+                                    <a href="#">Product Short Name</a>
                                 </h2>
                                 <div class="ratings-container">
                                     <div class="product-ratings">
@@ -323,7 +323,7 @@
                     <div class="col-6 col-md-4 col-lg-4">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
-                                <a href="product.html">
+                                <a href="#">
                                     <img src="{{asset('frontend/images/products/product-8.jpg')}}">
                                 </a>
                                 <div class="label-group">
@@ -342,7 +342,7 @@
                                     <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="product.html">Product Short Name</a>
+                                    <a href="#">Product Short Name</a>
                                 </h2>
                                 <div class="ratings-container">
                                     <div class="product-ratings">
@@ -360,7 +360,7 @@
                     <div class="col-6 col-md-4 col-lg-4">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
-                                <a href="product.html">
+                                <a href="#">
                                     <img src="{{asset('frontend/images/products/product-9.jpg')}}">
                                 </a>
                                 <div class="label-group">
@@ -379,7 +379,7 @@
                                     <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                 </div>
                                 <h2 class="product-title">
-                                    <a href="product.html">Product Short Name</a>
+                                    <a href="#">Product Short Name</a>
                                 </h2>
                                 <div class="ratings-container">
                                     <div class="product-ratings">
@@ -506,13 +506,13 @@
                         <div class="widget-body">
                             <div class="product-default left-details product-widget">
                                 <figure>
-                                    <a href="product.html">
+                                    <a href="#">
                                         <img src="{{asset('frontend/images/products/product-1.jpg')}}">
                                     </a>
                                 </figure>
                                 <div class="product-details">
                                     <h2 class="product-title">
-                                        <a href="product.html">Product Short Name</a>
+                                        <a href="#">Product Short Name</a>
                                     </h2>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -528,13 +528,13 @@
                             </div>
                             <div class="product-default left-details product-widget">
                                 <figure>
-                                    <a href="product.html">
+                                    <a href="#">
                                         <img src="{{asset('frontend/images/products/product-2.jpg')}}">
                                     </a>
                                 </figure>
                                 <div class="product-details">
                                     <h2 class="product-title">
-                                        <a href="product.html">Product Short Name</a>
+                                        <a href="#">Product Short Name</a>
                                     </h2>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -550,13 +550,13 @@
                             </div>
                             <div class="product-default left-details product-widget">
                                 <figure>
-                                    <a href="product.html">
+                                    <a href="#">
                                         <img src="{{asset('frontend/images/products/product-3.jpg')}}">
                                     </a>
                                 </figure>
                                 <div class="product-details">
                                     <h2 class="product-title">
-                                        <a href="product.html">Product Short Name</a>
+                                        <a href="#">Product Short Name</a>
                                     </h2>
                                     <div class="ratings-container">
                                         <div class="product-ratings">

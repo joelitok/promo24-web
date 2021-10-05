@@ -15,14 +15,14 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="{{asset('backend/css/style.css')}}">
   <!-- endinject -->
-  <link rel="shortcut icon" href="{{asset('backend/images/logo_2H_tech.png')}}" />
+  <link rel="shortcut icon" href="{{asset('backend/images/logo-promo24-v2.jpg')}}" />
 </head>
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="{{asset('backend/images/2h_.png')}}" class="mr-2" alt="logo"/></a>
+        <a  class="navbar-brand brand-logo mr-5"  href="#"><img src="{{asset('backend/images/logo-promo24-v2.jpg')}}" class="mr-2" width="300px" height="200px"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -37,7 +37,7 @@
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="{{asset('backend/images/logo_2H_tech.png')}}" alt="profile"/>
+              <img src="{{asset('backend/images/logo-promo24-v2.jpg')}}" alt="profile" />
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item">
@@ -58,7 +58,7 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="#">
               <i class="ti-home menu-icon"></i>
               <span class="menu-title">Tableau de bord</span>
             </a>
