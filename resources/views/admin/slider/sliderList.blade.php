@@ -26,13 +26,13 @@
                   </thead>
   
                   <tbody>
-{{$increment=1}}                   
-@foreach ($sliders as $slider)
-<tr>
+    {{$increment=1}}                   
+      @foreach ($sliders as $slider)
+  <tr>
   <td>{{$increment}}</td>
 {{--  <td><img src="/storage/slider_images/{{$slider->slider_image}}"></td>  --}}
-<td>  <img src="/storage/slider_images/{{ $slider->slider_image}}" alt=""></td>
- 
+<td>  <img src="/storage/slider_images/{{ $slider->slider_image}}" ></td>
+                                                       
  <td>{{$slider->slider_name}}</td>
  <td>{{$slider->slider_price}}</td>
   <td>{{$slider->slider_description}}</td>
@@ -66,12 +66,9 @@
           </div>
         </div>
       </div>
-
-      
     </div>
     <!-- content-wrapper ends -->
    @include('include.footerAdmin')
   </div>
   <!-- main-panel ends -->
-    
 @endsection
