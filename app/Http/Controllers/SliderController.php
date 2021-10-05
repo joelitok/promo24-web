@@ -30,38 +30,38 @@ class SliderController extends Controller
         if($request->hasFile('slider_image')){
 
         //methode 1
-        //     //1 get file name with extension
+             //1 get file name with extension
         
-        //     $fileNameWithExt=$request->file('slider_image')->getClientOriginalName();
-        //     //2 file name without extension
+             $fileNameWithExt=$request->file('slider_image')->getClientOriginalName();
+             //2 file name without extension
         
-        //     $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
+             $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
         
-        //     //3 get extension
-        //    $extension=$request->file('slider_image')->getClientOriginalExtension();
+             //3 get extension
+            $extension=$request->file('slider_image')->getClientOriginalExtension();
         
-        //     //4 rename image to store
-        //     $fileNameToStore=$fileName.'_'.time().'.'.$extension;
+             //4 rename image to store
+             $fileNameToStore=$fileName.'_'.time().'.'.$extension;
         
-        //     $path =$request->file('slider_image')->storeAs('public/slider_images',
-        //    $fileNameToStore);
+             $path =$request->file('slider_image')->storeAs('public/slider_images',
+            $fileNameToStore);
         
 
         //autre methode 
        //$img = Storage::disk('public')->put('slider_images', $request->slider_image);
 
        //methode 2
-        $image = $request->file('slider_image');
-        $new_name_image = rand() . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('slider_images'), $new_name_image);
+        // $image = $request->file('slider_image');
+        // $new_name_image = rand() . '.' . $image->getClientOriginalExtension();
+        // $image->move(public_path('slider_images'), $new_name_image);
          
         }else{
          
         //methode 1 
-     //   $fileNameToStore = 'noimage.jpg';
+       $fileNameToStore = 'noimage.jpg';
 
       //methode 2
-       $new_name_image='noimage.jpg';
+      //$new_name_image='noimage.jpg';
 
 
 
@@ -74,7 +74,7 @@ class SliderController extends Controller
         $slider->slider_price = $request->input('slider_price');
         $slider->slider_description = $request->input('slider_description');
         $slider->slider_status =1;
-        $slider->slider_image = $new_name_image;                  
+        $slider->slider_image = $fileNameToStore;                  
         $slider->save();
         return redirect('/new_slider')->with('status', 'Le   Slider ' .$slider->slider_name.'     a été ajouté');
 

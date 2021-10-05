@@ -54,31 +54,31 @@ class ProductController extends Controller
 
         if($request->hasFile('product_image')){
             //methode 1
-            // //1 get file name with extension
+             //1 get file name with extension
         
-            // $fileNameWithExt=$request->file('product_image')->getClientOriginalName();
-            // //2 file name without extension
+             $fileNameWithExt=$request->file('product_image')->getClientOriginalName();
+             //2 file name without extension
         
-            // $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
+             $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
         
-            // //3 get extension
-            // $extension=$request->file('product_image')->getClientOriginalExtension();
+             //3 get extension
+             $extension=$request->file('product_image')->getClientOriginalExtension();
         
-            // //4 renamane image to store
-            // $fileNameToStore=$fileName.'_'.time().'.'.$extension;
+             //4 renamane image to store
+             $fileNameToStore=$fileName.'_'.time().'.'.$extension;
         
-            // $path =$request->file('product_image')->storeAs('public/product_images',
-            // $fileNameToStore);
+             $path =$request->file('product_image')->storeAs('public/product_images',
+             $fileNameToStore);
 
 
         //methode 2
-        $image = $request->file('product_image');
-        $new_name_image = rand() . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('product_images'), $new_name_image);
+        // $image = $request->file('product_image');
+        // $new_name_image = rand() . '.' . $image->getClientOriginalExtension();
+        // $image->move(public_path('product_images'), $new_name_image);
         
         }else{
         //     //methode 1
-        //  $fileNameToStore = 'noimage.jpg';
+       $fileNameToStore = 'noimage.jpg';
 
          $new_name_image= 'noimage.jpg';
         }
@@ -90,7 +90,7 @@ class ProductController extends Controller
         $product->product_category = $request->input('product_category');
         $product->product_city = $request->input('product_city');
         $product->product_status =1;
-        $product->product_image = $new_name_image;
+        $product->product_image = $fileNameToStore;
         $product->save();
         return redirect('/new_product')->with('status', 'Le produit ' 
         .$product->product_name.'     a été ajouté');

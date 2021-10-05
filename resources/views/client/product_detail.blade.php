@@ -21,8 +21,8 @@
                                 <div class="product-slider-container product-item">
                                     <div class="product-single-carousel owl-carousel owl-theme">
                                         <div class="product-item">
-                                            {{-- <img class="product-single-image" src="/storage/product_images/{{$product->product_image}}" data-zoom-image="/storage/product_images/{{$product->product_image}}"/> --}}
-                                            <img class="product-single-image" src="{{ URL::to('/') }}/product_images/{{ $product->product_image}}" data-zoom-image="{{ URL::to('/') }}/product_images/{{ $product->product_image}}"/>
+                                             <img class="product-single-image" src="storage/product_images/{{$product->product_image}}" data-zoom-image="storage/product_images/{{$product->product_image}}"/>
+                                            {{-- <img class="product-single-image" src="{{ URL::to('/') }}/product_images/{{ $product->product_image}}" data-zoom-image="{{ URL::to('/') }}/product_images/{{ $product->product_image}}"/> --}}
                                         </div>
                     
                                     </div>
@@ -164,8 +164,8 @@
                                    <div class="product-default left-details product-widget">
                                     <figure>
                                         <a href="#">
-                                            {{-- <img src="/storage/product_images/{{$product->product_image}}"> --}}
-                                            <img src="{{ URL::to('/') }}/product_images/{{ $product->product_image}}" alt="">
+                                             <img src="storage/product_images/{{$product->product_image}}"> 
+                                            {{-- <img src="{{ URL::to('/') }}/product_images/{{ $product->product_image}}" alt=""> --}}
                                         </a>
                                     </figure>
                                     <div class="product-details">

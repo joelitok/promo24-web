@@ -22,10 +22,10 @@
                         <p>* Only 200 Available</p>
                     </div>   -->
                     @if($sliders)
-                    @foreach ($sliders as $slider)
-                    {{-- <div class="home-slide" style="background-image: url('{{asset('/storage/slider_images/'.$slider->slider_image)}}');">
-                         --}}
-                     <div class="home-slide" style="background-image: url('{{ URL::to('/') }}/slider_images/{{ $slider->slider_image}}');">
+                     @foreach ($sliders as $slider)
+                 <div class="home-slide" style="background-image: url('{{asset('storage/slider_images/'.$slider->slider_image)}}');">
+                        
+                     {{-- <div class="home-slide" style="background-image: url('{{ URL::to('/') }}/slider_images/{{ $slider->slider_image}}');"> --}}
                          
                         {{-- <img src="{{ URL::to('/') }}/slider_images/{{ $slider->slider_image}}" alt=""> --}}
                         <div class="slide-content content-left">
@@ -218,19 +218,19 @@
             @foreach ($products as $product)
             <div class="product-default inner-quickview inner-icon">
                 <figure>
-                    <a href="#">
-                        {{-- <img src="{{asset('/storage/product_images/'.$product->product_image)}}"> --}}
-                        <img src="{{ URL::to('/') }}/product_images/{{ $product->product_image}}" alt="">
+                    <a  onclick="window.location='{{url('/product_detail/'.$product->id.'/'.$product->product_category)}}'">
+                      <img src="{{asset('storage/product_images/'.$product->product_image)}}"> 
+                        {{-- <img src="{{URL::to('/')}}/product_images/{{$product->product_image}}" >--}}
                         
                     </a>
                     <div class="label-group">
-                        <span class="product-label label-cut">27% OFF</span>
-                        <span class="product-label label-cut" style="background-color:#F0C300">27% OFF</span>
+                        <span class="product-label label-cut">2550% OFF</span>
+                        <span class="product-label label-cut" style="background-color:#F0C300">2700% OFF</span>
                     </div>
                     <div class="btn-icon-group">
                         <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="icon-bag"></i></button>
                     </div>
-                    <a href="" class="btn-quickview" title="Quick View" onclick="window.location='{{url('/product_detail/'.$product->id.'/'.$product->product_category)}}'">Voir Plus</a>
+                    <a href="" class="btn-quickview" title="Voir Plus" onclick="window.location='{{url('/product_detail/'.$product->id.'/'.$product->product_category)}}'">Voir Plus</a>
                 </figure>
                 
                 <div class="product-details">
@@ -531,7 +531,7 @@
 
 
 
-        <div class="home-banner">
+        <div class="home-banner"> 
             <div class="image-container">
                 <img src="{{asset('frontend/images/banners/banner.jpg')}}">
             </div>
