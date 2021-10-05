@@ -31,7 +31,7 @@
 <tr>
   <td>{{$increment}}</td>
 {{--  <td><img src="/storage/slider_images/{{$slider->slider_image}}"></td>  --}}
-<td>  <img src="{{ URL::to('/') }}/storage/slider_images/{{ $slider->slider_image}}" alt=""></td>
+<td>  <img src="{{storage/slider_images/{{ $slider->slider_image}}" alt=""></td>
  
  <td>{{$slider->slider_name}}</td>
  <td>{{$slider->slider_price}}</td>
