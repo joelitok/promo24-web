@@ -92,7 +92,7 @@
         <!-- content-wrapper ends -->
         @include('include.footerAdmin')
         </div>
-        <!-- main-panel ends -->
+        <!-- main-panelL ends -->
       </div>
       <!-- page-body-wrapper ends -->
 @endsection
