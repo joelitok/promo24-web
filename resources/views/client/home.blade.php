@@ -23,7 +23,7 @@
                     </div>   -->
                     @if($sliders)
                      @foreach ($sliders as $slider)
-                 <div class="home-slide" style="background-image: url('{{asset('storage/slider_images/'.$slider->slider_image)}}');">
+                 <div class="home-slide" style="background-image: url('{{asset('{{ URL::to('/') }}/storage/slider_images/'.$slider->slider_image)}}');">
                         
                      {{-- <div class="home-slide" style="background-image: url('{{ URL::to('/') }}/slider_images/{{ $slider->slider_image}}');"> --}}
                          
@@ -219,7 +219,7 @@
             <div class="product-default inner-quickview inner-icon">
                 <figure>
                     <a  onclick="window.location='{{url('/product_detail/'.$product->id.'/'.$product->product_category)}}'">
-                      <img src="{{asset('storage/product_images/'.$product->product_image)}}"> 
+                      <img src="{{asset('{{ URL::to('/') }}/storage/product_images/'.$product->product_image)}}"> 
                         {{-- <img src="{{URL::to('/')}}/product_images/{{$product->product_image}}" >--}}
                         
                     </a>
