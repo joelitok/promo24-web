@@ -57,7 +57,7 @@
                         <label class="col-form-label">Description :</label>
                       </div>
                       <div class="col-lg-8">
-                        <input class="form-control" maxlength="50" name="slider_description" type="text" placeholder="Description du Slider.." required>
+                        <input class="form-control"  name="slider_description" type="text" placeholder="Description du Slider.." required>
                       </div>
                     </div>
                   <div class="form-group row">

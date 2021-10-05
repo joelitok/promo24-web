@@ -48,7 +48,7 @@
         <label class="badge badge-danger">Desactive</label> </td>      
         @endif
       
-      
+     
     
       </td>
    <!-- <td>
