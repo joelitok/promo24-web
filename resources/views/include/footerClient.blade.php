@@ -27,7 +27,7 @@
                     <div class="row row-sm">
                         <div class="col-lg-6 col-xl-4">
                             <a href="index.html">
-                                <img src="{{asset('frontend/images/logo-black.png')}}" alt="Porto Logo">
+                                <img src="{{asset('frontend/images/logo-promo24-v2.jpg')}}" alt="Promo Logo" width="200px" height="100px">
                             </a>
                             <div class="row row-sm">
                                 <div class="col-sm-6">

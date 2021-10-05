@@ -53,8 +53,8 @@
                         <button class="mobile-menu-toggler" type="button">
                             <i class="icon-menu"></i>
                         </button>
-                        <a href="index.html" class="logo">
-                            <img src="{{asset('frontend/images/logo.png')}}" alt="Porto Logo">
+                        <a href="{{URL::to('/')}}" class="logo">
+                            <img src="{{asset('frontend/images/logo-promo24-v2.jpg')}}" alt="Promo 24 Logo" width="300px" height="200px">
                         </a>
                     </div><!-- End .header-left -->
 
@@ -112,7 +112,7 @@
                                         <div class="product">
                                             <div class="product-details">
                                                 <h4 class="product-title">
-                                                    <a href="product.html">Woman Ring</a>
+                                                    <a href="#">Woman Ring</a>
                                                 </h4>
 
                                                 <span class="cart-product-info">
@@ -122,7 +122,7 @@
                                             </div><!-- End .product-details -->
 
                                             <figure class="product-image-container">
-                                                <a href="product.html" class="product-image">
+                                                <a href="#" class="product-image">
                                                     <img src="{{asset('frontend/images/products/cart/product-1.jpg')}}" alt="product">
                                                 </a>
                                                 <a href="#" class="btn-remove" title="Remove Product"><i class="icon-retweet"></i></a>
@@ -132,7 +132,7 @@
                                         <div class="product">
                                             <div class="product-details">
                                                 <h4 class="product-title">
-                                                    <a href="product.html">Woman Necklace</a>
+                                                    <a href="#">Woman Necklace</a>
                                                 </h4>
 
                                                 <span class="cart-product-info">
@@ -142,7 +142,7 @@
                                             </div><!-- End .product-details -->
 
                                             <figure class="product-image-container">
-                                                <a href="product.html" class="product-image">
+                                                <a href="#" class="product-image">
                                                     <img src="{{asset('frontend/images/products/cart/product-2.jpg')}}" alt="product">
                                                 </a>
                                                 <a href="#" class="btn-remove" title="Remove Product"><i class="icon-retweet"></i></a>
@@ -247,7 +247,7 @@
                             </li>
 							<li><a href="{{URL::to('/aboutus')}}">A propos </a></li>
 							<li><a href="{{URL::to('/contact')}}">Contact </a></li>
-							<li><a href="{{URL::to('/client_categories')}}">Categories</a></li>
+							<li><a href="{{URL::to('/client_categories')}}">Catégories</a></li>
                             <li><a href="#" target="_blank">Nous suivre</a></li>
 							
 							
@@ -255,9 +255,6 @@
                     </nav>
 
                     <div class="header-dropdowns">
-                        <div class="header-dropdown">
-                            <a href="#" class="link-seller">Become a Seller</a>
-                        </div>
                         <div class="header-dropdown">
                             <a href="#">ANGLAIS</a>
                             <div class="header-menu">
@@ -310,14 +307,19 @@
         <div class="mobile-menu-overlay"></div><!-- End .mobil-menu-overlay -->
         
         <div class="mobile-menu-container">
+           
         <div class="mobile-menu-wrapper">
+            
             <span class="mobile-menu-close"><i class="icon-retweet"></i></span>
             <nav class="mobile-nav">
+                <a href="{{URL::to('/')}}" class="logo">
+                    <img src="{{asset('frontend/images/logo-promo24-v1.jpg')}}" alt="Promo 24 Logo" width="300px" height="200px">
+                </a>
                 <ul class="mobile-menu">
-                    <li class="active"><a href="index.html">Accueil</a></li>
+                    <li class="active"><a href="#">Accueil</a></li>
                     
                     <li>
-                        <a href="product.html">Villes</a>
+                        <a href="#">Villes</a>
                         <ul>
                               
                             <li>
@@ -438,7 +440,7 @@
         <!-- newsletter-popup-form -->
         <div class="newsletter-popup mfp-hide bg-img" id="newsletter-popup" style="background-image: url({{asset('frontend/images/newsletter_popup_bg.jpg')}})">
         <div class="newsletter-popup-content">
-            <img src="{{asset('frontend/images/logo-black.png')}}" alt="Logo" class="logo-newsletter">
+            <img src="{{asset('frontend/images/logo-promo24-v2.jpg')}}" alt="Logo" class="logo-newsletter" width="300px" height="200">
             <h2>ETRE LE PREMIER A CONNAITRE</h2>
             <p>Scrire a Notre newsletter pour recevoir les notifications pour les promo</p>
             <form action="#">

@@ -23,8 +23,6 @@
                                         <div class="product-item">
                                             {{-- <img class="product-single-image" src="/storage/product_images/{{$product->product_image}}" data-zoom-image="/storage/product_images/{{$product->product_image}}"/> --}}
                                             <img class="product-single-image" src="{{ URL::to('/') }}/product_images/{{ $product->product_image}}" data-zoom-image="{{ URL::to('/') }}/product_images/{{ $product->product_image}}"/>
-                                           
-                                        
                                         </div>
                     
                                     </div>

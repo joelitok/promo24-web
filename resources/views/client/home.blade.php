@@ -35,7 +35,7 @@
                                 <span class="skew-box">{{$slider->slider_price}} FCFA</span>
                             </div>
           
-                            <a href="" class="btn btn-danger" onclick="window.location='{{url('/detail_slider/'.$slider->id)}}'" >Voir plus</a>  <!-- read function to find detail of product --->
+                            <a href="" class="btn btn-warning" onclick="window.location='{{url('/detail_slider/'.$slider->id)}}'" >Voir plus</a>  <!-- read function to find detail of product --->
                         </div>                                
                     </div>  
                     @endforeach 
@@ -278,9 +278,9 @@
                 <div class="banner-product bg-grey" style="background-image: url('{{asset('frontend/images/products/product-banner2.jpg')}}');
                     background-position : 48% 10%;">
                     <h2>POUR TOUS <br>LES STYLES</h2>
-                    <div class="ml-3 secondary-background">
+                    <div class="ml-3 primary-background">
                         <h3 class="skew-box">A partir de</h3>
-                        <h4 class="skew-box"><span class=" product-price">3990  FCFA</span><span class="old-price">4990  FCFA</span></h4>
+                        <h4 class="skew-box"><span class="product-price">3990  FCFA</span><span class="old-price">4990  FCFA</span></h4>
                     </div>
                 </div>
             </div>
@@ -534,15 +534,15 @@
             </div>
             <div class="info-group">
                 <div class="">
-                    <p>check new arrivals</p>
-                    <h2>Explore Smartphones</h2>
+                    <p>Nouvelle offre</p>
+                    <h2>offre exlusif</h2>
                 </div>
                 <div class="skew-box-group">
-                    <span class="skew-box">Exclusive COUPON</span>
-                    <h3 class="sale-off skew-box"><span>200</ FCFAspan>off</h3>
+                    <span class="skew-box">Offre Exclusif </span>
+                    <h3 class="sale-off skew-box"><span>200 FCFA </span></h3>
                 </div>
                 <div class="">
-                    <button class="btn">view all now</button>
+                    <a href="{{URL::to('/categories')}}" class="btn">voie plus</a>
                 </div>
             </div>
         </div>
@@ -551,7 +551,7 @@
     
     <section class="container mt-3 mb-7" id="topBrands">
         <div class="section-title mb-6">
-            <h2>Top Brands</h2>
+            <h2>Grande marques</h2>
         </div>
         <div class="partners-carousel owl-carousel owl-theme text-center" data-toggle="owl" data-owl-options="{
             'loop' : true,

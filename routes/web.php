@@ -55,7 +55,7 @@ Route::get('/del_city/{id}',[CityController::class, 'del_city']);
 
 
 //products
-Route::get('/products', [ProductController::class,'products']);
+//Route::get('/products', [ProductController::class,'products']);
 Route::get('/new_product', [ProductController::class,'new_product']);
 Route::post('/post_product', [ProductController::class,'post_product']);
 Route::get('/list_products',[ProductController::class,'list_products']);
