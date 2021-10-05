@@ -31,7 +31,7 @@
                         <label class="col-form-label">Nom :</label>
                       </div>
                       <div class="col-lg-8">
-                        <input class="form-control" maxlength="50" name="shop_name" type="text" placeholder="Nom de la boutique.." required>
+                        <input class="form-control" maxlength="250" name="shop_name" type="text" placeholder="Nom de la boutique.." required>
                       </div>
                     </div>
 
@@ -40,7 +40,7 @@
                           <label class="col-form-label">Description :</label>
                         </div>
                         <div class="col-lg-8">
-                          <input class="form-control" maxlength="1000" name="shop_description" type="text" placeholder="Description de la boutique.." required>
+                          <input class="form-control" maxlength="250" name="shop_description" type="text" placeholder="Description de la boutique.." required>
                         </div>
                       </div>
                       <div class="form-group row">
