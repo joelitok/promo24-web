@@ -292,7 +292,7 @@
  
 
     <div class="container">
-        <section class="product-panel mt-6">
+        {{-- <section class="product-panel mt-6">
             <div class="section-title">
                 <h2>Aliment</h2>
             </div>
@@ -515,18 +515,21 @@
                         </h2>
                         <div class="ratings-container">
                             <div class="product-ratings">
-                                <span class="ratings" style="width:0%"></span><!-- End .ratings -->
+                                <span class="ratings" style="width:0%"></span>
                                 <span class="tooltiptext tooltip-top"></span>
-                            </div><!-- End .product-ratings -->
-                        </div><!-- End .product-container -->
+                            </div>
+                        </div>
                         <div class="price-box">
                             <span class="old-price">59.00 FCFA</span>
                             <span class="product-price">49.00 FCFA</span>
-                        </div><!-- End .price-box -->
-                    </div><!-- End .product-details -->
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
+
+
+
 
         <div class="home-banner">
             <div class="image-container">

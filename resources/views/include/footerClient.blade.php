@@ -27,7 +27,7 @@
                     <div class="row row-sm">
                         <div class="col-lg-6 col-xl-4">
                             <a href="#">
-                                <img src="{{asset('frontend/images/logo-promo24-v2.jpg')}}" alt="Promo Logo" width="200px" height="100px">
+                                <img src="{{asset('frontend/images/logo-promo24-v2.jpg')}}" alt="Promo Logo" style="border-radius: 10%">
                             </a>
                             <div class="row row-sm">
                                 <div class="col-sm-6">
