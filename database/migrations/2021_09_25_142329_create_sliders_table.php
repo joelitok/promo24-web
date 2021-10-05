@@ -17,7 +17,7 @@ class CreateSlidersTable extends Migration
             $table->id();
             $table->string('slider_name');
             $table->integer('slider_price');
-            $table->string('slider_description');
+            $table->text('slider_description');
             $table->string('slider_image');
             $table->integer('slider_status');
             $table->timestamps();

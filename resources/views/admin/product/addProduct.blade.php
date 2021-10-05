@@ -48,7 +48,7 @@
                         <label class="col-form-label">Description</label>
                       </div>
                       <div class="col-lg-8">
-                        <textarea  name="product_description" class="form-control" maxlength="10000" type="text" rows="2" placeholder="Description du produit.." required></textarea>
+                        <textarea  name="product_description" class="form-control"  type="text"  placeholder="Description du produit.." required></textarea>
                     </div>
                     </div>
                     <div class="form-group row">

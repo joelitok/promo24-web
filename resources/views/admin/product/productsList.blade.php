@@ -28,7 +28,7 @@
                   </thead>
           
         <tbody>
-           
+  
 @if($products)
 {{$inc=1}}
  @foreach ($products as $product)
