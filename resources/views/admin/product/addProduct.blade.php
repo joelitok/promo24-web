@@ -119,7 +119,7 @@
 </div>
 <div class="col-lg-8">
 <label class="btn btn-outline-success btn-file">Selectionné une Image 
-<input  class="form-control " name="product_image" type="file" id="pro                                          duct_image_id"  onchange="PreviewImage();">
+<input  class="form-control " name="product_image" type="file" id="product_image_id"  onchange="PreviewImage();">
 </label>
 <img id="uploadPreview" style="width:100px; height:100px"/>                 
 </div>
