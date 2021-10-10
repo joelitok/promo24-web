@@ -54,7 +54,7 @@
                             <i class="icon-menu"></i>
                         </button>
                         <a href="{{URL::to('/')}}" class="logo">
-                            <img src="{{asset('frontend/images/logo-promo24-v2.jpg')}}" alt="Promo 24 Logo"  style="border-radius: 10%">
+                            <img src="{{asset('frontend/images/logo-promo24-v2.jpg')}}" alt="Promo 24 Logo">
                         </a>
                     </div><!-- End .header-left -->
 
@@ -313,7 +313,7 @@
             <span class="mobile-menu-close"><i class="icon-retweet"></i></span>
             <nav class="mobile-nav">
                 <a href="{{URL::to('/')}}" class="logo">
-                    <img src="{{asset('frontend/images/logo-promo24-v1.jpg')}}" alt="Promo 24 Logo" style="border-radius: 10%">
+                    <img src="{{asset('frontend/images/logo-promo24-v1.jpg')}}" alt="Promo 24 Logo">
                 </a>
                 <ul class="mobile-menu">
                     <li class="active"><a href="#">Accueil</a></li>
@@ -440,7 +440,7 @@
         <!-- newsletter-popup-form -->
         <div class="newsletter-popup mfp-hide bg-img" id="newsletter-popup" style="background-image: url({{asset('frontend/images/newsletter_popup_bg.jpg')}})">
         <div class="newsletter-popup-content">
-            <img src="{{asset('frontend/images/logo-promo24-v2.jpg')}}" alt="Logo" class="logo-newsletter" style="border-radius: 10%">
+            <img src="{{asset('frontend/images/logo-promo24-v2.jpg')}}" alt="Logo" class="logo-newsletter">
             <h2>ETRE LE PREMIER A CONNAITRE</h2>
             <p>Scrire a Notre newsletter pour recevoir les notifications pour les promo</p>
             <form action="#">
