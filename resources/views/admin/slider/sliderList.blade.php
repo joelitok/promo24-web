@@ -51,7 +51,7 @@
       @else
       <button class="btn btn-outline-success"  onclick="window.location='{{url('/activerslider/'.$slider->id)}}'">activer</button>
          
-      <a  href="" id="delete"></a>
+      <a  href="" id="delete"></a> 
          
       @endif
   <a class="btn btn-outline-danger" href="{{url('/del_slider/'.$slider->id)}}"   id="delete">delete</a>

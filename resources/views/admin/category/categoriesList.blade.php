@@ -41,7 +41,8 @@
     
 @endif
 </tbody>
-                </table>
+           
+</table>
               </div>
               <div style="text-align: right">{{$categories->onEachSide(5)->links()}}</div>
               
