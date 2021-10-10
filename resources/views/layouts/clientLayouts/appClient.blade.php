@@ -313,7 +313,7 @@
             <span class="mobile-menu-close"><i class="icon-retweet"></i></span>
             <nav class="mobile-nav">
                 <a href="{{URL::to('/')}}" class="logo">
-                    <img src="{{asset('frontend/images/logo-promo24-v1.jpg')}}" alt="Promo 24 Logo">
+                    <img src="{{asset('frontend/images/logo-promo24-v2.jpg')}}" alt="Promo 24 Logo">
                 </a>
                 <ul class="mobile-menu">
                     <li class="active"><a href="#">Accueil</a></li>
