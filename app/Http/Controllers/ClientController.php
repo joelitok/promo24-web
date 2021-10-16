@@ -32,7 +32,7 @@ class ClientController extends Controller
         $products=Product::where('product_shop', $shop->shop_name)->orderBy('id','DESC')->get();
         $cities=City::orderBy('id','DESC')->get();
         $categories=Category::orderBy('id','DESC')->get();
-        $sliders=Slider::where('slider_status', 1)->orderBy('id','DESC')->get();
+        $sliders=Slider::where('slider_status', 1)->orderBy('id','DESC')->limit(1)->get();
         $shops=Shop::orderBy('id','DESC')->get();
 
         return view('client.home')
