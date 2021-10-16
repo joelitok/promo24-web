@@ -8,7 +8,7 @@
     <title>Promo 24</title>
 
     <meta name="keywords" content="HTML5 Template" />
-    <meta name="description" content="Porto - Bootstrap eCommerce Template">
+    <meta name="description" content="promo24">
     <meta name="author" content="SW-THEMES">
         
     <!-- Favicon -->
@@ -221,23 +221,7 @@
 
 
 
-                                     <!--   <div class="col-lg-3">
-                                            <a href="#" class="nolink">Youande</a>
-                                            <ul class="submenu">
-                                                <li><a href="#">phamacie 2</a></li>
-                                                <li><a href="#">magazin 2</a></li>
-                                                <li><a href="#">boulengerie 2</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <a href="#" class="nolink">Bafoussam</a>
-                                            <ul class="submenu">
-                                                <li><a href="#">phamacie 3</a></li>
-                                                <li><a href="#">magazin 3</a></li>
-                                                <li><a href="#">boulengerie 3</a></li>
-                                                
-                                            </ul>
-                                        </div>  -->
+                                   
 
                                         <div class="col-lg-3 image-container">
                                             <img src="{{asset('frontend/images/menu-banner-1.jpg')}}" alt="Menu banner" class="product-promo">
