@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="{{asset('backend/css/themify-icons.css')}}">
   <link rel="stylesheet" href="{{asset('backend/css/vendor.bundle.base.css')}}">
   <link rel="stylesheet" href="{{asset('backend/css/vendor.bundle.addons.css')}}">
+  
+
+  <!-- fontawesome of icon add 11/10/2021-->
+  {{-- <link rel="stylesheet" href="{{asset('backend/demo-files/demo.css')}}">--}}
+	<link rel="stylesheet" href="{{asset('backend/themify-icons.css')}}"> 
+  {{-- <link rel="stylesheet" href="{{asset('backend/ie7/ie7.css')}}">
+  <link rel="stylesheet" href="{{asset('backend/ie7/ie7.js')}}"> --}}
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
@@ -16,13 +23,15 @@
   <link rel="stylesheet" href="{{asset('backend/css/style.css')}}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{asset('backend/images/logo-promo24-v2.jpg')}}" />
+
+
 </head>
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a  class="navbar-brand brand-logo mr-5"  href="#"><img src="{{asset('backend/images/logo-promo24-v2.jpg')}}" class="mr-2" width="300px" height="200px"/></a>
+        <a   class="navbar-brand brand-logo mr-5" href="#"><img src="{{asset('backend/images/logo-promo24-v2.jpg')}}" class="mr-2" width="200px" height="200px"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">

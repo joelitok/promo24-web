@@ -35,7 +35,7 @@
 
  <tr>
     <td>{{$inc}}</td>
-    <td><img src="{{ URL::to('/') }}/storage/product_images/{{$product->product_image}}"></td>
+    <td><img src="/storage/product_images/{{$product->product_image}}"></td>
     {{-- <td> <img src="{{ URL::to('/') }}/product_images/{{ $product->product_image}}" alt=""></td> --}}
 
     <td>{{$product->product_name}}</td>

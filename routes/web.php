@@ -30,7 +30,7 @@ Route::get('/', [ClientController::class, 'home']);
 Route::get('/aboutus', [ClientController::class, 'aboutus']);
 Route::get('/contact', [ClientController::class, 'contact']);
 Route::get('/client_categories', [ClientController::class, 'categories']);
-
+Route::get('/shop_city/{id}', [ClientController::class, 'shop_city']);
 
 
 //categories

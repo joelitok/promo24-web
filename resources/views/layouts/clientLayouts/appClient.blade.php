@@ -184,8 +184,8 @@
                                               @foreach ($shops as $shop)
                                               <ul class="submenu">
                                             @if($shop->shop_city_name=='Douala')
-                                               <li><a href="#">{{$shop->shop_name}}</a></li>
-                                              </ul>
+                                            <li><a href="#"  onclick="window.location='{{url('/shop_city/'.$shop->id)}}'">{{$shop->shop_name}}</a></li>
+                                        </ul>
                                             @endif
                                               @endforeach   
                                             @endif
@@ -198,7 +198,7 @@
                                               @foreach ($shops as $shop)
                                               <ul class="submenu">
                                             @if($shop->shop_city_name=='Bafoussam')
-                                               <li><a href="#">{{$shop->shop_name}}</a></li>
+                                               <li><a href="#"  onclick="window.location='{{url('/shop_city/'.$shop->id)}}'">{{$shop->shop_name}}</a></li>
                                               </ul>
                                             @endif
                                               @endforeach   
@@ -211,8 +211,8 @@
                                               @foreach ($shops as $shop)
                                               <ul class="submenu">
                                             @if($shop->shop_city_name=='Yaoundé')
-                                               <li><a href="#">{{$shop->shop_name}}</a></li>
-                                              </ul>
+                                            <li><a href="#"  onclick="window.location='{{url('/shop_city/'.$shop->id)}}'">{{$shop->shop_name}}</a></li>
+                                        </ul>
                                             @endif
                                               @endforeach   
                                             @endif
