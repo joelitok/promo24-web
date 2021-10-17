@@ -31,24 +31,24 @@ class SliderController extends Controller
 
         if($request->hasFile('slider_image')){
 
-        //methode 1
-             //1 get file name with extension
+        // //methode 1
+        //      //1 get file name with extension
         
-             $fileNameWithExt=$request->file('slider_image')->getClientOriginalName();
-             //2 file name without extension
+        //      $fileNameWithExt=$request->file('slider_image')->getClientOriginalName();
+        //      //2 file name without extension
         
-             $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
+        //      $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
         
-             //3 get extension
-            $extension=$request->file('slider_image')->getClientOriginalExtension();
+        //      //3 get extension
+        //     $extension=$request->file('slider_image')->getClientOriginalExtension();
         
-             //4 rename image to store
-             $fileNameToStore=$fileName.'_'.time().'.'.$extension;
+        //      //4 rename image to store
+        //      $fileNameToStore=$fileName.'_'.time().'.'.$extension;
         
 
-$uploadedFileUrl = Cloudinary::upload($request->file('slider_image')->getRealPath())->getPath();                
+   $uploadedFileUrl = Cloudinary::upload($request->file('slider_image')->getRealPath())->getPath();                
 
-    $path =$request->file('slider_image')->storeAs('public/slider_images', basename($uploadedFileUrl));
+    // $path =$request->file('slider_image')->storeAs('public/slider_images', basename($uploadedFileUrl));
     
 
       
