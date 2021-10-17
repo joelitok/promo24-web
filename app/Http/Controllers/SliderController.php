@@ -47,7 +47,8 @@ class SliderController extends Controller
         
 
         //$uploadedFileUrl = Cloudinary::upload($request->file('slider_image')->getRealPath())->getSecurePath();                
-        $uploadedFileUrl = cloudinary()->upload($request->file('file')->getRealPath())->getSecurePath();
+      //  $result = $request->file('slider_image')->storeOnCloudinary();
+        $uploadedFileUrl = cloudinary()->upload($request->file('slider_image')->getRealPath())->getSecurePath();
     // $path =$request->file('slider_image')->storeAs('public/slider_images', basename($uploadedFileUrl));
     
 
