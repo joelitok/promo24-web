@@ -32,8 +32,7 @@
   <td>{{$increment}}</td>
 {{--  <td><img src="/storage/slider_images/{{$slider->slider_image}}"></td>  --}}
 <td>  <img src="https://res.cloudinary.com/placide-tchoufa-nkouatchet/image/upload/v1634436300/{{$slider->slider_image}}">
-</td>
-                                                       
+</td>                                             
  <td>{{$slider->slider_name}}</td>
  <td>{{$slider->slider_price}}</td>
   <td>{{$slider->slider_description}}</td>
