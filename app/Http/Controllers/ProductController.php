@@ -70,7 +70,8 @@ class ProductController extends Controller
              $path =$request->file('product_image')->storeAs('public/product_images',
              $fileNameToStore);
 
-
+             $uploadedFileUrl = Cloudinary::upload($request->file('slider_image')->getRealPath())->getSecurePath();                
+   
         //methode 2
         // $image = $request->file('product_image');
         // $new_name_image = rand() . '.' . $image->getClientOriginalExtension();
@@ -90,7 +91,7 @@ class ProductController extends Controller
         $product->product_category = $request->input('product_category');
         $product->product_city = $request->input('product_city');
         $product->product_status =1;
-        $product->product_image = $fileNameToStore;
+        $product->product_image =  $uploadedFileUrl;
         $product->save();
         return redirect('/new_product')->with('status', 'Le produit ' 
         .$product->product_name.'     a été ajouté');
@@ -277,6 +278,9 @@ public function post_product_promotion(Request $request){
     
         $path =$request->file('p_product_image')->storeAs('public/product_images',
         $fileNameToStore);
+        
+        $uploadedFileUrl = Cloudinary::upload($request->file('slider_image')->getRealPath())->getSecurePath();                
+   
     
     }else{
      $fileNameToStore = 'noimage.jpg';
@@ -289,7 +293,7 @@ public function post_product_promotion(Request $request){
     $productPromo->p_product_category = $request->input('p_product_category');
     $productPromo->p_product_city = $request->input('p_product_city');
     $productPromo->p_product_status =1;
-    $productPromo->p_product_image = $fileNameToStore;
+    $productPromo->p_product_image = $uploadedFileUrl;
     $productPromo->save();
     return redirect('/new_product_promotion')->with('status', 'Le produit  '
      .$productPromo->p_product_name.'     à été ajouté');
