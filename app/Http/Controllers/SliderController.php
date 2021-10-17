@@ -12,7 +12,7 @@ class SliderController extends Controller
 {
     //
     public function sliders(){
-        $sliders=Slider::get();
+        $sliders=Slider::orderBy('id','DESC')->get();
         return view('admin.slider.sliderList')->with('sliders', $sliders);
     }
     public function new_slider(){
@@ -149,10 +149,7 @@ public function desactive_slider($id){
     $slider->slider_status=0;
     $slider->update();
     return redirect('/sliders')->with('status', 'le slider a été désactiver  avec succes');
-
-
 }
-
 
 
 public function active_slider($id){

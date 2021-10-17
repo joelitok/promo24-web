@@ -10,7 +10,7 @@ class CityController extends Controller
     //
 
 public function cities(){
-    $cities=City::get();
+    $cities=City::orderBy('id', 'DESC')->get();
     return view('admin.city.cityList')->with('cities', $cities);
 }
 

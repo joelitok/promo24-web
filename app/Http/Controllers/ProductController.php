@@ -15,9 +15,9 @@ class ProductController extends Controller
     //
 //affichier le formulaire d'ajout
     public function new_product_promotion(){
-        $categories=Category::get();
-        $cities=City::get();
-        $shops=Shop::get();
+        $categories=Category::orderBy('id','DESC')->get();
+        $cities=City::orderBy('id','DESC')->get();
+        $shops=Shop::orderBy('id','DESC')->get();
         return view('admin.product.promotionAddProduct')
         ->with('categories',$categories)
         ->with('cities', $cities)
@@ -27,9 +27,9 @@ class ProductController extends Controller
 
     //affichier le formulaire d ajout de produit
     public function new_product(){
-        $categories=Category::get();
-        $cities=City::get();
-        $shops=Shop::get();
+        $categories=Category::orderBy('id','DESC')->get();
+        $cities=City::orderBy('id','DESC')->get();
+        $shops=Shop::orderBy('id','DESC')->get();
         
         return view('admin.product.addProduct')
         ->with('categories',$categories)
@@ -100,7 +100,7 @@ class ProductController extends Controller
 
 //affichier la liste des produits
 public function list_products(){
-    $products=Product::get();
+    $products=Product::orderBy('id','DESC')->get();
     return view('admin.product.productsList')->with('products',$products);
 }
 
@@ -175,9 +175,9 @@ public function update_product(Request $request){
 //éditer un produit
 public function edit_product($id){
     $product=Product::find($id);
-    $categories=Category::get();
-    $cities =City::get();
-    $shops=Shop::get();
+    $categories=Category::orderBy('id','DESC')->get();
+    $cities =City::orderBy('id','DESC')->get();
+    $shops=Shop::orderBy('id','DESC')->get();
     return view('admin.product.editProduct')->with('product', $product)
     ->with('categories',$categories)->with('cities',$cities)->with('shops',$shops);
 }
@@ -209,9 +209,9 @@ public function activer_product($id){
 //voir la parti detail de notre application 
 public function product_detail($id,$category){
     $product=Product::find($id);
-    $products=Product::where('product_category',$category)->limit(3)->get();
-    $shops=Shop::get();
-    $categories=Category::get();
+    $products=Product::where('product_category',$category)->limit(3)->orderBy('id','DESC')->get();
+    $shops=Shop::orderBy('id','DESC')->get();
+    $categories=Category::orderBy('id','DESC')->get();
     return view('client.product_detail')
     ->with('product',$product)
     ->with('shops',$shops)
@@ -246,7 +246,7 @@ public function del_p_product($id){
 
 
 public function list_promo_products(){
-    $p_products=ProductPromo::get();
+    $p_products=ProductPromo::orderBy('id','DESC')->get();
     return view('admin.product.promotionProductsList')->with('p_products',$p_products);
 }
 

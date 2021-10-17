@@ -36,7 +36,7 @@
 </td>                                              
  <td>{{$slider->slider_name}}</td>
  <td>{{$slider->slider_price}}</td>
-  <td>{{$slider->slider_description}}</td>
+  <td>{{$slider->created_at->format('d / m / Y')}}</td>
   <td>
       @if($slider->slider_status==1)
       <label class="badge badge-success">Active</label> </td>     

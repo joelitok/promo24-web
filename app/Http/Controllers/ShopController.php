@@ -17,7 +17,7 @@ public function shop_list(){
 public function post_shop(Request $request){
     
     $shop=new Shop();  
-    $cities=City::get();   
+    $cities=City::orderBy('id','DESC')->get();   
     $shop->shop_name = $request->input('shop_name');
     $shop->shop_description = $request->input('shop_description');
     $shop->shop_city_name = $request->input('shop_city_name');
@@ -28,12 +28,12 @@ public function post_shop(Request $request){
 
 
 public function new_shop(){
-    $cities=City::get();
+    $cities=City::orderBy('id','DESC')->get();
     return view('admin.shop.addShop')->with('cities', $cities);
 }
 
 public function list_shops(){
-    $shops=Shop::get();
+    $shops=Shop::orderBy('id','DESC')->get();
     return view('admin.shop.shopList')->with('shops', $shops);
 }
 
