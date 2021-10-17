@@ -70,7 +70,7 @@ class ProductController extends Controller
              $path =$request->file('product_image')->storeAs('public/product_images',
              $fileNameToStore);
 
-             $uploadedFileUrl = Cloudinary::upload($request->file('slider_image')->getRealPath())->getSecurePath();                
+        $uploadedFileUrl = Cloudinary::upload($request->file('product_image')->getRealPath())->getSecurePath();                
    
         //methode 2
         // $image = $request->file('product_image');
@@ -279,7 +279,7 @@ public function post_product_promotion(Request $request){
         $path =$request->file('p_product_image')->storeAs('public/product_images',
         $fileNameToStore);
         
-        $uploadedFileUrl = Cloudinary::upload($request->file('slider_image')->getRealPath())->getSecurePath();                
+        $uploadedFileUrl = Cloudinary::upload($request->file('slidp_product_image')->getRealPath())->getSecurePath();                
    
     
     }else{
