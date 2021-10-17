@@ -338,7 +338,7 @@
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
                                 <a onclick="window.location='{{url('/product_detail/'.$product->id.'/'.$product->product_category)}}'">
-                                    <img src="{{asset('/storage/product_images/'.$product->product_image)}}">
+                                    <img src="{{$product->product_image}}">
                                 </a>
                                 <div class="btn-icon-group">
                                     <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="icon-bag"></i></button>
