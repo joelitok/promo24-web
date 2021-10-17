@@ -31,7 +31,7 @@ Route::get('/aboutus', [ClientController::class, 'aboutus']);
 Route::get('/contact', [ClientController::class, 'contact']);
 Route::get('/client_categories', [ClientController::class, 'categories']);
 Route::get('/shop_city/{id}', [ClientController::class, 'shop_city']);
-
+Route::get('/login', [ClientController::class, 'login']);
 
 //categories
 Route::get('/categories',[CategoryController::class, 'categories']);
@@ -67,6 +67,18 @@ Route::get('/activerproduct/{id}',[ProductController::class,'activer_product']);
 Route::get('/list_promo_products',[ProductController::class,'list_promo_products']);
 Route::get('/del_p_product/{id}',[ProductController::class,'del_p_product']);
 Route::get('/product_detail/{id}/{category}',[ProductController::class,'product_detail']);
+
+
+Route::get('/new_product_shop', [ProductController::class,'new_product']);
+Route::post('/post_product_shop', [ProductController::class,'post_product']);
+Route::get('/list_products_shop',[ProductController::class,'list_products']);
+Route::get('/del_product_shop/{id}',[ProductController::class,'del_product']);
+Route::get('/edit_product_shop/{id}',[ProductController::class,'edit_product']);
+Route::post('/update_product_shop',[ProductController::class,'update_product']);
+Route::get('/desactiverproduct_shop/{id}',[ProductController::class,'desactiver_product']);
+Route::get('/activerproduct_shop/{id}',[ProductController::class,'activer_product']);
+Route::get('/list_promo_products_shop',[ProductController::class,'list_promo_products']);
+Route::get('/del_p_product_shop/{id}',[ProductController::class,'del_p_product']);
 
 
 

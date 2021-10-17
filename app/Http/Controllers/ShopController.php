@@ -41,8 +41,10 @@ public function del_shop($id){
     $shop=Shop::find($id);
     $shop->delete();
     return redirect('/shops')
-    ->with('status','La boutique    '.$shop->shop_name.'   a été supprimé ');
+    ->with('status','La boutique'.$shop->shop_name.'   a été supprimé ');
      }
+
+
 
 
 

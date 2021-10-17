@@ -68,6 +68,10 @@ class ClientController extends Controller
        ->with('shops',$shops)->with('categories',$categories);
    }
 
+   public function login(){
+       return view('auth.login');
+   }
+
 
   
 
