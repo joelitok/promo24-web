@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Slider;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
+
 
 class SliderController extends Controller
 {
@@ -43,10 +45,13 @@ class SliderController extends Controller
              //4 rename image to store
              $fileNameToStore=$fileName.'_'.time().'.'.$extension;
         
-             $path =$request->file('slider_image')->storeAs('public/slider_images',
-            $fileNameToStore);
-        
 
+$uploadedFileUrl = Cloudinary::upload($request->file('slider_image')->getRealPath())->getSecurePath();                
+
+$path =$request->file('slider_image')->storeAs('public/slider_images', basename($uploadedFileUrl));
+    
+
+      
         //autre methode 
        //$img = Storage::disk('public')->put('slider_images', $request->slider_image);
 
@@ -63,9 +68,6 @@ class SliderController extends Controller
       //methode 2
       //$new_name_image='noimage.jpg';
 
-
-
-
          //autre methode 
         // $request->slider_image='noimage.jpg';
         }
@@ -74,7 +76,8 @@ class SliderController extends Controller
         $slider->slider_price = $request->input('slider_price');
         $slider->slider_description = $request->input('slider_description');
         $slider->slider_status =1;
-        $slider->slider_image = $fileNameToStore;                  
+        $slider->slider_image = $uploadedFileUrl;  
+        // Upload an Image File to Cloudinary with One line of Code
         $slider->save();
         return redirect('/new_slider')->with('status', 'Le   Slider ' .$slider->slider_name.'     a été ajouté');
 
