@@ -34,7 +34,7 @@
 
  <tr>
     <td>{{$increment=1}}</td>
-    <td><img src="/storage/product_images/{{$p_product->p_product_image}}"></td>
+    <td><img src="{{$p_product->p_product_image}}"></td>
     <td>{{$p_product->p_product_name}}</td>
     <td>{{$p_product->p_product_price}} FCFA</td>
     <td>{{$p_product->p_product_shop}}</td>
