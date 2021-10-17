@@ -32,22 +32,22 @@ class SliderController extends Controller
         if($request->hasFile('slider_image')){
 
         // //methode 1
-        //      //1 get file name with extension
+              //1 get file name with extension
         
-        //      $fileNameWithExt=$request->file('slider_image')->getClientOriginalName();
-        //      //2 file name without extension
+              $fileNameWithExt=$request->file('slider_image')->getClientOriginalName();
+              //2 file name without extension
         
-        //      $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
+              $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
         
-        //      //3 get extension
-        //     $extension=$request->file('slider_image')->getClientOriginalExtension();
+              //3 get extension
+             $extension=$request->file('slider_image')->getClientOriginalExtension();
         
         //      //4 rename image to store
         //      $fileNameToStore=$fileName.'_'.time().'.'.$extension;
         
 
-    //$uploadedFileUrl = Cloudinary::upload($request->file('slider_image')->getRealPath())->getSecurePath();                
-        $result = $request->file('slider_image')->storeOnCloudinary();
+    $uploadedFileUrl = Cloudinary::upload($request->file('slider_image')->getRealPath())->getSecurePath();                
+      //  $result = $request->file('slider_image')->storeOnCloudinary();
        // $uploadedFileUrl = cloudinary()->upload($request->file('slider_image')->getRealPath())->getSecurePath();
     // $path =$request->file('slider_image')->storeAs('public/slider_images', basename($uploadedFileUrl));
     
@@ -77,7 +77,7 @@ class SliderController extends Controller
         $slider->slider_price = $request->input('slider_price');
         $slider->slider_description = $request->input('slider_description');
         $slider->slider_status =1;
-        $slider->slider_image ='basename($uploadedFileUrl)';  
+        $slider->slider_image =$uploadedFileUrl;  
         // Upload an Image File to Cloudinary with One line of Code
         $slider->save();
         return redirect('/new_slider')->with('status', 'Le   Slider ' .$slider->slider_name.'     a été ajouté');
