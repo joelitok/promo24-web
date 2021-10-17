@@ -46,7 +46,7 @@ class SliderController extends Controller
              $fileNameToStore=$fileName.'_'.time().'.'.$extension;
         
 
-$uploadedFileUrl = Cloudinary::upload($request->file('slider_image')->getRealPath())->getSecurePath();                
+$uploadedFileUrl = Cloudinary::upload($request->file('slider_image')->getRealPath())->getPath();                
 
     $path =$request->file('slider_image')->storeAs('public/slider_images', basename($uploadedFileUrl));
     
