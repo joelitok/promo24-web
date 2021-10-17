@@ -76,7 +76,7 @@ class SliderController extends Controller
         $slider->slider_price = $request->input('slider_price');
         $slider->slider_description = $request->input('slider_description');
         $slider->slider_status =1;
-        $slider->slider_image = basename($uploadedFileUrl);  
+        $slider->slider_image ='basename($uploadedFileUrl)';  
         // Upload an Image File to Cloudinary with One line of Code
         $slider->save();
         return redirect('/new_slider')->with('status', 'Le   Slider ' .$slider->slider_name.'     a été ajouté');
