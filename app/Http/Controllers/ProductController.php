@@ -70,8 +70,11 @@ class ProductController extends Controller
         
              $path =$request->file('product_image')->storeAs('public/product_images',
              $fileNameToStore);
+             $uploadedFileUrl = cloudinary()->upload($request->file('product_image')->getRealPath())->getSecurePath();
+             $path =$request->file('product_image')->storeAs('public/product_images', basename($uploadedFileUrl));
+            
 
-        $uploadedFileUrl = Cloudinary::upload($request->file('product_image')->getRealPath())->getSecurePath();                
+               //$uploadedFileUrl = Cloudinary::upload($request->file('product_image')->getRealPath())->getSecurePath();                
    
         //methode 2
         // $image = $request->file('product_image');
@@ -92,7 +95,7 @@ class ProductController extends Controller
         $product->product_category = $request->input('product_category');
         $product->product_city = $request->input('product_city');
         $product->product_status =1;
-        $product->product_image =  $uploadedFileUrl;
+        $product->product_image =  basename($uploadedFileUrl);
         $product->save();
         return redirect('/new_product')->with('status', 'Le produit ' 
         .$product->product_name.'     a été ajouté');
@@ -159,12 +162,13 @@ public function update_product(Request $request){
         //4 renamane image to store
         $fileNameToStore=$fileName.'_'.time().'.'.$extension;
     
-        $path =$request->file('product_image')->storeAs('public/product_images', $fileNameToStore);
-    
+        $uploadedFileUrl = cloudinary()->upload($request->file('slider_image')->getRealPath())->getSecurePath();
+        $path =$request->file('slider_image')->storeAs('public/slider_images', basename($uploadedFileUrl));
+       
         if($product->product_image!='noimage.jpg'){
             Storage::delete('public/product_images/'.$product->image);
         }
-        $product->product_image=$fileNameToStore;
+        $product->product_image= basename($fileNameToStore);
     
     }
     $product->update();

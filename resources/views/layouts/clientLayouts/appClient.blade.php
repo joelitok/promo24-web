@@ -32,22 +32,14 @@
 
     <!-- Main CSS File -->
     <link rel="stylesheet" href="{{asset('frontend/css/style.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/form/css/style.css')}}">
+   
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/vendor/fontawesome-free/css/all.min.css')}}">
 </head>
 <body>
     <div class="page-wrapper">
         <header class="header">
-        {{--   <div class="header-top">
-                <a href="#">
-                    <img src="{{asset('frontend/images/banners/header_item.png')}}">
-                    <h3>PortoPlus X Pro Only</h3>
-                    <span class="skew-box product-price">199 FCFA</span>
-                    <span class="old-price">299FCFA</span>
-                    <span class="round-box">code: <strong>portoplusx</strong></span>
-                </a>
-            </div>    --}} <!-- End .header-top -->
-
-            <div class="header-middle">
+             <div class="header-middle">
                 <div class="container">
                     <div class="header-left">
                         <button class="mobile-menu-toggler" type="button">
@@ -92,76 +84,7 @@
                                 </div>
                             </div>
                         </a>
-
                         <a href="#" class="porto-icon"><i class="icon icon-heart"></i></a>
-
-                        <div class="dropdown cart-dropdown">
-                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
-                                <i class="minicart-icon"></i>
-                                <span class="cart-count">2</span>
-                            </a>
-
-                            <div class="dropdown-menu" >
-                                <div class="dropdownmenu-wrapper">
-                                    <div class="dropdown-cart-header">
-                                        <span>2 Items</span>
-
-                                        <a href="cart.html">View Cart</a>
-                                    </div><!-- End .dropdown-cart-header -->
-                                    <div class="dropdown-cart-products">
-                                        <div class="product">
-                                            <div class="product-details">
-                                                <h4 class="product-title">
-                                                    <a href="#">Woman Ring</a>
-                                                </h4>
-
-                                                <span class="cart-product-info">
-                                                    <span class="cart-product-qty">1</span>
-                                                     99.00 FCFA
-                                                </span>
-                                            </div><!-- End .product-details -->
-
-                                            <figure class="product-image-container">
-                                                <a href="#" class="product-image">
-                                                    <img src="{{asset('frontend/images/products/cart/product-1.jpg')}}" alt="product">
-                                                </a>
-                                                <a href="#" class="btn-remove" title="Remove Product"><i class="icon-retweet"></i></a>
-                                            </figure>
-                                        </div><!-- End .product -->
-
-                                        <div class="product">
-                                            <div class="product-details">
-                                                <h4 class="product-title">
-                                                    <a href="#">Woman Necklace</a>
-                                                </h4>
-
-                                                <span class="cart-product-info">
-                                                    <span class="cart-product-qty">1</span>
-                                                    x 35.00 FCFA
-                                                </span>
-                                            </div><!-- End .product-details -->
-
-                                            <figure class="product-image-container">
-                                                <a href="#" class="product-image">
-                                                    <img src="{{asset('frontend/images/products/cart/product-2.jpg')}}" alt="product">
-                                                </a>
-                                                <a href="#" class="btn-remove" title="Remove Product"><i class="icon-retweet"></i></a>
-                                            </figure>
-                                        </div><!-- End .product -->
-                                    </div><!-- End .cart-product -->
-
-                                    <div class="dropdown-cart-total">
-                                        <span>Total</span>
-
-                                        <span class="cart-total-price">134.0 FCFA</span>
-                                    </div><!-- End .dropdown-cart-total -->
-
-                                    <div class="dropdown-cart-action">
-                                        <a href="checkout-shipping.html" class="btn btn-block">Checkout</a>
-                                    </div><!-- End .dropdown-cart-total -->
-                                </div><!-- End .dropdownmenu-wrapper -->
-                            </div><!-- End .dropdown-menu -->
-                        </div><!-- End .dropdown -->
                     </div><!-- End .header-right -->
                 </div><!-- End .container -->
             </div><!-- End .header-middle -->
@@ -240,11 +163,11 @@
 
                     <div class="header-dropdowns">
                         <div class="header-dropdown">
-                            <a href="#">ANGLAIS</a>
+                            <a href="#" style="font-size: 2.1rem">ANGLAIS</a>
                             <div class="header-menu">
                                 <ul>
-                                    <li><a href="#">ANGLAIS</a></li>
-                                    <li><a href="#">FRANCAIS</a></li>
+                                    <li><a href="#" style="font-size: 2.1rem">ANGLAIS</a></li>
+                                    <li><a href="#" style="font-size: 2.1rem">FRANCAIS</a></li>
                                 </ul>
                             </div><!-- End .header-menu -->
                         </div><!-- End .header-dropown -->
@@ -452,6 +375,7 @@
         <script src="{{asset('frontend/js/plugins.min.js')}}"></script>
         <script src="{{asset('frontend/js/jquery.countdown/jquery.countdown.min.js')}}"></script>
         <script src="{{asset('frontend/js/plugins/isotope-docs.min.js')}}"></script>
+        <script src="{{asset('frontend/form/js/form.js')}}"></script>
         
         <!-- Main JS File -->
         <script src="{{asset('frontend/js/main_init.min.js')}}"></script>

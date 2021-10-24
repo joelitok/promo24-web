@@ -21,8 +21,13 @@
                                 <div class="product-slider-container product-item">
                                     <div class="product-single-carousel owl-carousel owl-theme">
                                         <div class="product-item">
-                                             <img class="product-single-image" src="{{$product->product_image}}" data-zoom-image="{{$product->product_image}}"/>
-                                            {{-- <img class="product-single-image" src="{{ URL::to('/') }}/product_images/{{ $product->product_image}}" data-zoom-image="{{ URL::to('/') }}/product_images/{{ $product->product_image}}"/> --}}
+                                             @if(config('app.env') === 'local')
+                                             <img class="product-single-image" src="/storage/product_images/{{$product->product_image}}" data-zoom-image="/storage/product_images/{{$product->product_image}}"/>
+                                             @else
+                                             <img class="product-single-image" src="https://res.cloudinary.com/placide-tchoufa-nkouatchet/image/upload/v1634853537/{{$product->product_image}}" data-zoom-image="https://res.cloudinary.com/placide-tchoufa-nkouatchet/image/upload/v1634853537/{{$product->product_image}}"/>
+                                           
+                                             @endif
+                                             {{-- <img class="product-single-image" src="{{ URL::to('/') }}/product_images/{{ $product->product_image}}" data-zoom-image="{{ URL::to('/') }}/product_images/{{ $product->product_image}}"/> --}}
                                         </div>
                     
                                     </div>
@@ -33,8 +38,11 @@
                                 </div>
                                 <div class="prod-thumbnail row owl-dots" id='carousel-custom-dots'>
                                     <div class="col-3 owl-dot">
-                                        {{-- <img src="/{{ URL::to('/') }}/storage/product_images/{{$product->product_image}}"/> --}}
-                                        <img src="{{ $product->product_image}}"/>
+                                       @if(config('app.env') === 'local')
+                                        <img src="/storage/product_images/{{$product->product_image}}"> 
+                                        @else
+                                        <img src="https://res.cloudinary.com/placide-tchoufa-nkouatchet/image/upload/v1634853537/{{$product->product_image}}">
+                                        @endif
                                         
                                     </div>
                                 </div>
@@ -144,7 +152,7 @@
                                 <h3>{{$product->product_category}}</h3>
                                 <h4>Cameroun</h4>
 
-                                <i class="fa fa-info-circle"></i><span class="span-info">97.4%</span><span>commentaire</span>
+                                <i class="fa fa-info-circle"></i><span class="span-info">99.0%</span><span>commentaire</span>
 
                                 <a href="#">gallerie</a>
                             </div>
@@ -164,9 +172,11 @@
                                    <div class="product-default left-details product-widget">
                                     <figure>
                                         <a href="#">
-                                             <img src="{{$product->product_image}}"> 
-                                            {{-- <img src="{{ URL::to('/') }}/product_images/{{ $product->product_image}}" alt=""> --}}
-                                        </a>
+                                            @if(config('app.env') === 'local')
+                                            <img src="/storage/product_images/{{$product->product_image}}"> 
+                                            @else
+                                            <img src="https://res.cloudinary.com/placide-tchoufa-nkouatchet/image/upload/v1634853537/{{$product->product_image}}">
+                                            @endif</a>
                                     </figure>
                                     <div class="product-details">
                                         <h2 class="product-title">

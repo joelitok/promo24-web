@@ -42,18 +42,15 @@ class SliderController extends Controller
               //3 get extension
              $extension=$request->file('slider_image')->getClientOriginalExtension();
         
-        //      //4 rename image to store
-        //      $fileNameToStore=$fileName.'_'.time().'.'.$extension;
-        
+             //4 rename image to store
+        $fileNameToStore=$fileName.'_'.time().'.'.$extension;
+        $path =$request->file('slider_image')->storeAs('public/slider_images', $fileNameToStore);
 
-    $uploadedFileUrl = Cloudinary::upload($request->file('slider_image')->getRealPath())->getSecurePath();                
+       // $uploadedFileUrl = Cloudinary::upload($request->file('slider_image')->getRealPath())->getSecurePath();                
       //  $result = $request->file('slider_image')->storeOnCloudinary();
-       // $uploadedFileUrl = cloudinary()->upload($request->file('slider_image')->getRealPath())->getSecurePath();
-    // $path =$request->file('slider_image')->storeAs('public/slider_images', basename($uploadedFileUrl));
-    
-
-      
-        //autre methode 
+     $uploadedFileUrl = cloudinary()->upload($request->file('slider_image')->getRealPath())->getSecurePath();
+     $path =$request->file('slider_image')->storeAs('public/slider_images', basename($uploadedFileUrl));
+     //autre methode 
        //$img = Storage::disk('public')->put('slider_images', $request->slider_image);
 
        //methode 2
@@ -77,7 +74,7 @@ class SliderController extends Controller
         $slider->slider_price = $request->input('slider_price');
         $slider->slider_description = $request->input('slider_description');
         $slider->slider_status =1;
-        $slider->slider_image =$uploadedFileUrl;  
+        $slider->slider_image = basename($uploadedFileUrl);  
         // Upload an Image File to Cloudinary with One line of Code
         $slider->save();
         return redirect('/new_slider')->with('status', 'Le   Slider ' .$slider->slider_name.'     a été ajouté');
@@ -95,35 +92,6 @@ class SliderController extends Controller
 // Storage::url($name); 
 // $fileName =time().'.'.$request->avatar->extension();
 // $request->file('avatar')->storeAs('avatarstest2',$fileName,'public');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 
