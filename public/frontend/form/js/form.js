@@ -12,7 +12,7 @@ function showTab(n) {
         document.getElementById("prevBtn").style.display = "inline";
     }
     if (n == (x.length - 1)) {
-        document.getElementById("nextBtn").innerHTML = "Envoyer";
+        document.getElementById("nextBtn").innerHTML = "Recherché";
     } else {
         document.getElementById("nextBtn").innerHTML = "Suivant";
     }

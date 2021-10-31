@@ -3,22 +3,18 @@
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-3">
-                            <a href="#" class="widget-newsletter-title">Enregistrer vous a la Newsletter</a>
-                        </div>
-                        <div class="col-lg-4">
-                            <p class="widget-newsletter-content">Pour recevoir les informations de promotions  <br>
-                                <span class="widget-newsletter-content">Et obtener un coupon de 10 000 FCFA pour vos achats</span>
+                       
+                        <div class="col-lg-6">
+            <span class="widget-newsletter-content"> 
+                <img src="{{asset('frontend/images/logo-promo24-v2.jpg')}}" alt="Promo 24 Logo">   
+            </span>
                             </p>
-                        </div>
-                        <div class="col-lg-5">
-                            <form action="#">
-                                <div class="footer-submit-wrapper">
-                                    <input type="email" class="form-control" placeholder="Enter your Email address" required>
-                                    <button type="submit" class="btn">Subscribe</button>
-                                </div>
-                            </form>
-                        </div>
+                        </div><div class="col-lg-6">
+                            <span class="widget-newsletter-content">Toutes les promotions en <strong  style="color:rgb(244,146,47)">un  clic </strong>  </span>
+                        </p>
+                    </div>
+
+                        
                     </div>
                 </div>
             </div>

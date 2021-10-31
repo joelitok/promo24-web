@@ -33,6 +33,16 @@ Route::get('/client_categories', [ClientController::class, 'categories']);
 Route::get('/shop_city/{id}', [ClientController::class, 'shop_city']);
 Route::get('/login', [ClientController::class, 'login']);
 
+//ville, catalogue, catalogue et   produits de l   espace administratif
+
+Route::get('/city_c', [ClientController::class, 'city_c']);
+Route::get('/category_c',  [ClientController::class, 'category_c']);
+Route::get('/catalogue_c', [ClientController::class, 'catalogue_c']);
+
+
+Route::get('/categories_data', [ClientController::class, 'categories_data']);
+Route::get('/catalogues_data', [ClientController::class, 'catalogues_data']);
+
 //categories
 Route::get('/categories',[CategoryController::class, 'categories']);
 Route::get('/new_category',[CategoryController::class, 'new_category']);
@@ -51,8 +61,6 @@ Route::get('/cities',[CityController::class, 'cities']);
 Route::get('/new_city',[CityController::class, 'new_city']);
 Route::post('/post_city',[CityController::class, 'post_city']);
 Route::get('/del_city/{id}',[CityController::class, 'del_city']);
-
-
 
 //products
 //Route::get('/products', [ProductController::class,'products']);

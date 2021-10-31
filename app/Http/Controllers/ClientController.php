@@ -9,9 +9,55 @@ use App\Models\Product;
 use App\Models\Slider;
 use App\Models\Shop;
 use App\Models\Order;
+use App\Models\Catalogue;
 class ClientController extends Controller
 {
     //
+
+public function categories_data(Request $request){
+$data = Category::where('id_city_category', $request->id)->get();
+return response()->json($data);
+}
+
+public function  category_c(){
+    $categories=Category::orderBy('id','DESC')->get();
+    $cities =City::orderBy('id','DESC')->get();
+    $shops=Shop::orderBy('id','DESC')->get();
+    $catalogues=Catalogue::orderBy('id','DESC')->get();
+
+    return view('client.category')->with('catalogues',$catalogues)
+    ->with('cities', $cities)->with('categories', $categories)->with('shops', $shops);
+}
+
+
+public function  catalogue_c(){
+    $categories=Category::orderBy('id','DESC')->get();
+    $cities =City::orderBy('id','DESC')->get();
+    $shops=Shop::orderBy('id','DESC')->get();
+    $catalogues=Catalogue::orderBy('id','DESC')->get();
+
+    return view('client.catalogue')->with('catalogues',$catalogues)
+    ->with('cities', $cities)->with('categories', $categories)->with('shops', $shops);
+}
+
+
+public function  city_c(){
+    $categories=Category::orderBy('id','DESC')->get();
+    $cities =City::orderBy('id','DESC')->get();
+    $shops=Shop::orderBy('id','DESC')->get();
+    $catalogues=Catalogue::orderBy('id','DESC')->get();
+
+    return  view('client.city')->with('catalogues',$catalogues)
+    ->with('cities', $cities)->with('categories', $categories)->with('shops', $shops);
+}
+
+
+
+    public function catalogues_data(Request $request){
+    $data = Catalogue::where('id_category_catalogue', $request->id)->get();
+    return response()->json($data);
+    }
+
     public function home(){
         $categories=Category::orderBy('id','DESC')->get();
         $shops=Shop::orderBy('id','DESC')->get();

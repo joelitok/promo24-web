@@ -380,5 +380,89 @@
         <!-- Main JS File -->
         <script src="{{asset('frontend/js/main_init.min.js')}}"></script>
         <script src="{{asset('frontend/js/main.min.js')}}"></script>
+
+        
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+        
+                $(document).on('change','#city',function(){
+                    // console.log("hmm its change");
+                         var city_id=$(this).val();
+			           //  console.log(city_id);
+                    var op = " ";
+                    var div = $(this).parent();;
+                $.ajax({
+                    type:'get',
+                    url:'{!!URL::to('categories_data')!!}',
+                    data:{'id':city_id},
+                    success:function(data){
+                    console.log('success');
+                    console.log(data);
+
+                    
+					//console.log(data.length);
+					op+='<option style="font-family: Raleway;" value="0" selected disabled> - selection la categorie-</option>';
+					for(var i=0;i<data.length;i++){
+					op+='<option style="font-family: Raleway;" value="'+data[i].id+'">'+data[i].category_name+'</option>';
+
+                    div.find('#category_name').html(" ");
+				    div.find('#category_name').append(op);
+                    }
+                },
+                        error:function(){
+                        console.log('une erreur c est produire')
+                        }
+                    });
+
+
+                     });
+                    });
+
+
+        $(document).ready(function(){
+        
+        $(document).on('change','#category_name',function(){
+            // console.log("hmm its change");
+                 var id=$(this).val();
+               //  console.log(city_id);
+            var op = " ";
+            var div = $(this).parent();;
+            $.ajax({
+            type:'get',
+            url:'{!!URL::to('catalogues_data')!!}',
+            data:{'id':id},
+
+            success:function(data){
+            console.log('success');
+            console.log(data);
+
+            
+            //console.log(data.length);
+            op+='<option style="font-family: Raleway;" value="0" selected disabled> - selection le catalogue-</option>';
+            for(var i=0;i<data.length;i++){
+            op+='<option style="font-family: Raleway;" value="'+data[i].id+'">'+data[i].catalogue_name+'</option>';
+
+            div.find('#catalogue_name').html(" ");
+            div.find('#catalogue_name').append(op);
+            }
+        },
+                error:function(){
+                console.log('une erreur produires')
+                }
+            });
+
+
+             });
+            });
+               
+        </script>
+
+
+
+
+
+
+        
         </body>
         </html>
