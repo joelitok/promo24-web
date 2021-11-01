@@ -4,7 +4,7 @@
     <div class="content-wrapper">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Listes des cat&eacute;gories</h4>
+          <h4 class="card-title">Listes des catalogues</h4>
           <div class="row">
             <div class="col-12">
               <div class="table-responsive">
@@ -12,7 +12,7 @@
                   <thead>
                     <tr>
                         <th>Ordre</th>
-                        <th>Nom de la categorie</th>
+                        <th>Nom de la catalogue</th>
                         <th colspan="3" style="text-align: center;">Actions</th>
                         
                     </tr>
@@ -20,16 +20,16 @@
           
         <tbody>
 {{$inc=1}}         
-@if($categories)
- @foreach ($categories as $category)  
+@if($catalogues)
+ @foreach ($catalogues as $catalogue)  
  <tr>
     <td>{{$inc}}</td>
-    <td>{{$category->category_name}}</td>
+    <td>{{$catalogue->catalogue_name}}</td>
    <!-- <td>
       <label class="badge badge-info">On hold</label>
     </td>   -->
     <td>
-    <a class="btn btn-outline-danger" href="{{url('/del_category/'.$category->id)}}" id="delete">Delete</a>             
+    <a class="btn btn-outline-danger" href="{{url('/del_catalogue/'.$catalogue->id)}}" id="delete">Delete</a>             
     </td>
 </tr>
  {{$inc+=1}}
@@ -44,7 +44,7 @@
            
 </table>
               </div>
-              <div style="text-align: right">{{$categories->links('paginate.paginatelinks')}}</div>
+              <div style="text-align: right">{{$catalogues->links('paginate.paginatelinks')}}</div>
               
             </div>
           </div>

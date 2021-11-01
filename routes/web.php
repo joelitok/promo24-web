@@ -8,7 +8,7 @@ use App\Http\Controllers\CityController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ShopController;
-
+use App\Http\Controllers\CatalogueController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,6 +49,13 @@ Route::get('/categories',[CategoryController::class, 'categories']);
 Route::get('/new_category',[CategoryController::class, 'new_category']);
 Route::post('/post_category',[CategoryController::class, 'post_category']);
 Route::get('/del_category/{id}',[CategoryController::class, 'del_category']);
+
+
+//catalogues
+Route::get('/catalogues',[CatalogueController::class, 'catalogues']);
+Route::get('/new_catalogue',[CatalogueController::class, 'new_catalogue']);
+Route::post('/post_catalogue',[CatalogueController::class, 'post_catalogue']);
+Route::get('/del_catalogue/{id}',[CatalogueController::class, 'del_catalogue']);
 
 
 
