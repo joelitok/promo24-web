@@ -62,7 +62,7 @@ public function  city_c(){
         $categories=Category::orderBy('id','DESC')->get();
         $shops=Shop::orderBy('id','DESC')->get();
         $cities=City::orderBy('id','DESC')->get();
-        $products=Product::where('product_status', 1)->orderBy('id','DESC')->get();
+        $products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
         $sliders=Slider::where('slider_status', 1)->orderBy('id','DESC')->get();
 
         return view('client.home')
@@ -124,20 +124,20 @@ public function  city_c(){
 
 
 
-   public function search( Request $request){
-
+public function search( Request $request, $catalogue_name=null){
 
 
  $categories=Category::orderBy('id','DESC')->get();
 $cities =City::orderBy('id','DESC')->paginate(6);
 $shops=Shop::orderBy('id','DESC')->get();
-$catalogues=Catalogue::orderBy('id','DESC')->get();
+$catalogues=Catalogue::orderBy('id','DESC')
+->where('catalogue_name', $catalogue_name)->get();
             //end
          $search=$request->get('search'); 
                // dd($search);
          $products = Product::where('product_name','like','%'.$search.'%')
         ->orWhere('product_description','like','%'.$search.'%')
-             ->orWhere('product_category','like','%'.$search.'%')->orderBy('id','DESC')->paginate(8);
+        ->orWhere('product_category','like','%'.$search.'%')->orderBy('id','DESC')->paginate(8);
    
     return  view('client.search')->with('catalogues',$catalogues)
     ->with('cities', $cities)->with('categories', $categories)

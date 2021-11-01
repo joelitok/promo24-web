@@ -58,7 +58,7 @@
                     catégories  et en fin votre catalogues puis cliquer sur le boutton rechercher</h2>
 
                    <div class="d-flex btn-lg btn-block justify-content-center align-items-center container">
-                       <form action="index.php">
+                       <form action="{{URL::to('/search')}}" method="get">
     
                             <select name="city"  class="form-select"   name="city" id="city" style="font-family:'Mukta', sans-serif;">
                                 <option value="0" disabled="true" selected="true"   style="margin-top: 10px;font-family: 'Mukta', sans-serif;"  >- Selection Votre ville  -</option>
@@ -137,6 +137,7 @@
                     </div>
                 </div>
             </div><!-- End .col-lg-9 -->
+            {{$products->links('paginate.paginatelinks')}}
         </div><!-- End .row -->
     </div><!-- End .container -->
 

@@ -23,8 +23,9 @@ class CreateProductsTable extends Migration
             $table->string('product_city');
             $table->integer('product_status');
             $table->string('product_image')->nullable();
-
-            $table->integer('id_category_product')->default(0);
+            
+            $table->integer('id_catalogue_product')->default(1);
+            $table->integer('id_category_product')->default(1);
             $table->timestamps();
         });
     }

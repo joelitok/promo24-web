@@ -8,6 +8,7 @@ use App\Models\ProductPromo;
 use App\Models\Category;
 use App\Models\City;
 use App\Models\Shop;
+use App\Models\Catalogue;
 use Storage;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 
@@ -29,12 +30,14 @@ class ProductController extends Controller
     //affichier le formulaire d ajout de produit
     public function new_product(){
         $categories=Category::orderBy('id','DESC')->get();
+        $catalogues=Catalogue::orderBy('id','DESC')->get();
         $cities=City::orderBy('id','DESC')->get();
         $shops=Shop::orderBy('id','DESC')->get();
         
         return view('admin.product.addProduct')
         ->with('categories',$categories)
         ->with('cities', $cities)
+        ->with('catalogues', $catalogues)
         ->with('shops',$shops);
     }
 

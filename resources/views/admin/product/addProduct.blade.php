@@ -31,7 +31,23 @@
                 <div class="card">
                   <div class="card-body">
                     <h3 class="card-title" style="text-align:center;"> Ajouter un produit</h3>
-
+     
+                    <div class="form-group row">
+                      <div class="col-lg-3">
+                        <label class="col-form-label">catalogue :</label>
+                      </div>
+                      <div class="col-lg-8">
+                        <select name="product_catalogue" class="form-control">
+                            @foreach ($catalogues as $catalogue)
+                            <option {{$catalogue->id}}>{{$catalogue->catalogue_name}}
+                            </option>
+                            @endforeach
+                            
+                         
+                           
+                        </select>
+                    </div>
+                    </div>
 
                     <div class="form-group row">
                       <div class="col-lg-3">

@@ -38,7 +38,7 @@ Route::get('/login', [ClientController::class, 'login']);
 Route::get('/city_c', [ClientController::class, 'city_c']);
 Route::get('/category_c',  [ClientController::class, 'category_c']);
 Route::get('/catalogue_c', [ClientController::class, 'catalogue_c']);
-Route::get('/search',[ClientController::class, 'search']);
+Route::get('/search/{catalogue_name?}',[ClientController::class, 'search']);
 
 
 Route::get('/categories_data', [ClientController::class, 'categories_data']);
