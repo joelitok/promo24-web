@@ -53,9 +53,9 @@
                     <div class="header-center">
                         <div class="header-search">
                             <a href="#" class="search-toggle" role="button"><i class="icon-magnifier"></i></a>
-                            <form action="#" method="get">
+                            <form action="{{URL::to('/search')}}" method="get">
                                 <div class="header-search-wrapper">
-                                    <input type="search" class="form-control" name="q" id="q" placeholder="rechercher.." required>
+                                    <input type="submit" class="form-control" name="search" id="search" placeholder="rechercher.." required>
                                     <div class="select-custom">
                                         <select id="cat" name="cat">
                                             @if($categories)

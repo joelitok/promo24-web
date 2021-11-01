@@ -20,7 +20,7 @@ return response()->json($data);
 }
 
 public function  category_c(){
-    $categories=Category::orderBy('id','DESC')->get();
+    $categories=Category::orderBy('id','DESC')->paginate(6);
     $cities =City::orderBy('id','DESC')->get();
     $shops=Shop::orderBy('id','DESC')->get();
     $catalogues=Catalogue::orderBy('id','DESC')->get();
@@ -34,7 +34,7 @@ public function  catalogue_c(){
     $categories=Category::orderBy('id','DESC')->get();
     $cities =City::orderBy('id','DESC')->get();
     $shops=Shop::orderBy('id','DESC')->get();
-    $catalogues=Catalogue::orderBy('id','DESC')->get();
+    $catalogues=Catalogue::orderBy('id','DESC')->paginate(8);
 
     return view('client.catalogue')->with('catalogues',$catalogues)
     ->with('cities', $cities)->with('categories', $categories)->with('shops', $shops);
@@ -43,7 +43,7 @@ public function  catalogue_c(){
 
 public function  city_c(){
     $categories=Category::orderBy('id','DESC')->get();
-    $cities =City::orderBy('id','DESC')->get();
+    $cities =City::orderBy('id','DESC')->paginate(6);
     $shops=Shop::orderBy('id','DESC')->get();
     $catalogues=Catalogue::orderBy('id','DESC')->get();
 
@@ -117,6 +117,32 @@ public function  city_c(){
    public function login(){
        return view('auth.login');
    }
+
+
+
+
+
+
+
+   public function search( Request $request){
+
+
+
+ $categories=Category::orderBy('id','DESC')->get();
+$cities =City::orderBy('id','DESC')->paginate(6);
+$shops=Shop::orderBy('id','DESC')->get();
+$catalogues=Catalogue::orderBy('id','DESC')->get();
+            //end
+         $search=$request->get('search'); 
+               // dd($search);
+         $products = Product::where('product_name','like','%'.$search.'%')
+        ->orWhere('product_description','like','%'.$search.'%')
+             ->orWhere('product_category','like','%'.$search.'%')->orderBy('id','DESC')->paginate(8);
+   
+    return  view('client.search')->with('catalogues',$catalogues)
+    ->with('cities', $cities)->with('categories', $categories)
+    ->with('shops', $shops)->with('products', $products);
+     }         
 
 
   

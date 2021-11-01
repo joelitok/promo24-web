@@ -6,40 +6,40 @@
     
 @include('include.menu')
 <div class="container">
+    <h2 style="font-size: 30px;color:black"> Cliqué votre ville de residence:</h2>
   <div class="product-intro divide-line up-effect">
-        <div class="col-6 col-sm-4 col-lg-3 product-default">
-            <figure>
-                <a href="product.html">
-                    <img src="{{asset('frontend/images/products/product-1.jpg')}}">
-                </a>
-                <!-- <span class="product-label label-sale">27% OFF</span> -->
-            </figure>
-            <div class="product-details">
-                <h2 class="product-title">
-                    <a href="product.html">Porto Short Name</a>
-                </h2>
-                <div class="ratings-container">
-                    <div class="product-ratings">
-                        <span class="ratings" style="width:80%"></span><!-- End .ratings -->
-                        <span class="tooltiptext tooltip-top"></span>
-                    </div><!-- End .product-ratings -->
-                </div><!-- End .product-container -->
-                <div class="price-box">
-                    <span class="product-price">$46.00</span>
-                </div><!-- End .price-box -->
-                <div class="product-action">
-                    <a href="#" class="btn-icon-wish"><i class="icon-heart"></i></a>
-                    <button class="btn-icon btn-add-cart" data-toggle="modal" data-target="#addCartModal"><i class="icon-bag"></i>ADD TO CART</button>
-                    <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a> 
-                </div>
-            </div><!-- End .product-details -->
-        </div>
-  
-    <nav class="toolbox toolbox-pagination">
-        
-    </nav>
-</div><!-- End .container -->
 
+@isset($cities)
+@foreach ($cities as $city)
+   
+<div class="col-6 col-sm-4 col-lg-3 product-default justify-content-center">
+    <figure>
+
+
+        
+        <!-- <span class="product-label label-sale">27% OFF</span> -->
+    </figure>
+     <div class="product-details">
+         <a href="#">
+            <i class="icon-home" style="font-size: 60px"></i>
+         </a>
+         <h2>
+            <a href="#">{{$city->city_name}}</a>
+        </h2>
+    </div>
+</div> 
+@endforeach  
+@endisset
+
+
+
+
+  
+   
+</div><!-- End .container -->
+<nav class="toolbox toolbox-pagination">
+    {{$cities->links('paginate.paginatelinks')}}
+</nav>
 </main><!-- End .main -->
 @endsection
         
